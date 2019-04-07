@@ -1,34 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
 
-        <TextView
-            android:id="@+id/danger_heading"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:gravity="center_horizontal"
-            android:inputType="textPersonName"
-            android:text="DANGER"
-            android:textColor="@color/colorAccent"
-            android:textSize="30sp"
-            tools:layout_editor_absoluteX="104dp"
-            tools:layout_editor_absoluteY="33dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
         <Button
-            android:id="@+id/button_next_d"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_centerHorizontal="true"
-            android:text="Next"
-            tools:layout_editor_absoluteX="161dp"
-            tools:layout_editor_absoluteY="541dp" />
+            android:id="@+id/danger_button"
+            android:layout_width="match_parent"
+            android:layout_height="148dp"
+            android:layout_alignparentTop="true"
+            android:background="@color/colorAccent"
+            android:text="D"
+            android:textColor="@android:color/background_light"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/response_button"
+            android:layout_width="match_parent"
+            android:layout_height="148dp"
+            android:layout_below="@id/danger_button"
+            android:layout_marginTop="-2dp"
+            android:background="@android:color/holo_orange_light"
+            android:text="R"
+            android:textColor="@android:color/background_light"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/airways_button"
+            android:layout_width="match_parent"
+            android:layout_height="148dp"
+            android:layout_below="@id/response_button"
+            android:background="@android:color/holo_green_dark"
+            android:text="A"
+            android:textColor="@android:color/background_light"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/breathing_button"
+            android:layout_width="match_parent"
+            android:layout_height="148dp"
+            android:layout_below="@id/airways_button"
+            android:background="@android:color/holo_blue_light"
+            android:text="B"
+            android:textColor="@android:color/background_light"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/compressions_button"
+            android:layout_width="match_parent"
+            android:layout_height="148dp"
+            android:layout_below="@id/breathing_button"
+            android:background="@android:color/holo_purple"
+            android:text="C"
+            android:textColor="@android:color/background_light"
+            android:textSize="30sp" />
     </RelativeLayout>
 </layout>
