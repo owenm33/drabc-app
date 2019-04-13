@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ResponseActivity">
+
+        <TextView
+            android:id="@+id/response_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:gravity="center_horizontal"
+            android:inputType="textPersonName"
+            android:text="RESPONSE"
+            android:textColor="@color/colorAccent"
+            android:textSize="30sp"
+            tools:layout_editor_absoluteX="104dp"
+            tools:layout_editor_absoluteY="33dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:text="Next"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="541dp" />
+
+    </RelativeLayout>
+</layout>

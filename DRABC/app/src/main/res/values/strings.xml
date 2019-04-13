@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">DRABC</string>
+    <string name="danger_instruction_message">"D A N G E R"</string>
+    <string name="response_instruction_message">"R E S P O N S E"</string>
+    <string name="airways_instruction_message">"A I R W A Y S"</string>
+    <string name="breathing_instruction_message">"B R E A T H I N G"</string>
+    <string name="compressions_instruction_message">"C O M P R E S S I O N S"</string>
 </resources>
