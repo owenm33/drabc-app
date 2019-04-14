@@ -12,6 +12,9 @@ import android.widget.Toolbar;
 import com.example.drabc.R;
 
 public class FullScreenDialog extends DialogFragment {
+
+    public static String TAG = "FullScreenDialog";
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         // Use Builder class for convenient dialog construction

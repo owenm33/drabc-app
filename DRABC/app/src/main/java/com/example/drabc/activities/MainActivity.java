@@ -45,11 +45,11 @@ public class MainActivity extends AppCompatActivity {
         compressions = binding.compressionsButton;
         mainLayout = binding.mainViewRoot;
     }
-
-    private void onDanger() {
-        danger.setText("DANGER TEST!");
-        dialog.show(ft, FullScreenDialog.TAG);
-    }
+//
+//    private void onDanger() {
+//        danger.setText("DANGER TEST!");
+//        dialog.show(ft, FullScreenDialog.TAG);
+//    }
 
     private void onResponse() {
         response.setText("RESPONSE TEST!");

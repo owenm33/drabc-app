@@ -1,8 +1,14 @@
 <resources>
     <string name="app_name">DRABC</string>
-    <string name="danger_instruction_message">"D A N G E R"</string>
-    <string name="response_instruction_message">"R E S P O N S E"</string>
-    <string name="airways_instruction_message">"A I R W A Y S"</string>
-    <string name="breathing_instruction_message">"B R E A T H I N G"</string>
-    <string name="compressions_instruction_message">"C O M P R E S S I O N S"</string>
+    <string name="danger_title">D A N G E R</string>
+    <string name="danger_message">Is there any danger present?</string>
+    <string name="response_message">R E S P O N S E</string>
+    <string name="airways_message">A I R W A Y S</string>
+    <string name="breathing_message">B R E A T H I N G</string>
+    <string name="compressions_message">C O M P R E S S I O N S</string>
+
+    <string name="in_danger">Yes, I\'m in danger</string>
+    <string name="no_danger">No, I\'m safe</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
