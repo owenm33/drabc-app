@@ -19,6 +19,7 @@ import com.example.drabc.R;
 import com.example.drabc.databinding.ActivityMainBinding;
 import com.example.drabc.fragments.FullScreenDialog;
 
+// test
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
