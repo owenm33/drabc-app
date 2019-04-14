@@ -1,17 +1,18 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/main_view_root"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         tools:context=".activities.MainActivity">
 
         <Button
             android:id="@+id/danger_button"
+            android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="148dp"
-            android:layout_alignParentTop="true"
+            android:layout_height="0dp"
             android:background="@color/colorAccent"
             android:text="D"
             android:textColor="@android:color/background_light"
@@ -19,10 +20,10 @@
 
         <Button
             android:id="@+id/response_button"
+            android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="148dp"
+            android:layout_height="0dp"
             android:layout_below="@id/danger_button"
-            android:layout_marginTop="-2dp"
             android:background="@android:color/holo_orange_light"
             android:text="R"
             android:textColor="@android:color/background_light"
@@ -30,8 +31,9 @@
 
         <Button
             android:id="@+id/airways_button"
+            android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="148dp"
+            android:layout_height="0dp"
             android:layout_below="@id/response_button"
             android:background="@android:color/holo_green_dark"
             android:text="A"
@@ -40,8 +42,9 @@
 
         <Button
             android:id="@+id/breathing_button"
+            android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="148dp"
+            android:layout_height="0dp"
             android:layout_below="@id/airways_button"
             android:background="@android:color/holo_blue_light"
             android:text="B"
@@ -50,12 +53,13 @@
 
         <Button
             android:id="@+id/compressions_button"
+            android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="148dp"
+            android:layout_height="0dp"
             android:layout_below="@id/breathing_button"
             android:background="@android:color/holo_purple"
             android:text="C"
             android:textColor="@android:color/background_light"
             android:textSize="30sp"/>
-    </RelativeLayout>
+    </LinearLayout>
 </layout>

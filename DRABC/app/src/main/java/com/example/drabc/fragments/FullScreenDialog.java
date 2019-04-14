@@ -28,9 +28,9 @@ public class FullScreenDialog extends DialogFragment {
         View view = inflater.inflate(R.layout.layout_full_screen_dialog, container, false);
 
         Toolbar toolbar = view.findViewById(R.id.toolbar);
-//        toolbar.setNavigationIcon(R.drawable.ic_close_white_24dp);
+        toolbar.setNavigationIcon(R.drawable.ic_close_white_24dp);
 //        toolbar.setNavigationOnClickListener(view1 -> cancelUpload());
-//        toolbar.setTitle("My Dialog");
+        toolbar.setTitle("My Dialog");
 
         return view;
     }

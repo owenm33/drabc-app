@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     RelativeLayout.LayoutParams params;
     boolean click = true;
     FullScreenDialog dialog = new FullScreenDialog();
-    FragmentTransaction ft = getFragmentManager().beginTransaction();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
         airways = binding.airwaysButton;
         breathing = binding.breathingButton;
         compressions = binding.compressionsButton;
-        mainLayout = binding.mainViewRoot;
     }
 //
 //    private void onDanger() {
@@ -72,9 +71,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void onClick() {
-//        if (click) {
-//            popUp.showAtLocation(this.
-//        }
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        dialog.show();
     }
 
 //    private showPopup(final Activity, Point p) {
