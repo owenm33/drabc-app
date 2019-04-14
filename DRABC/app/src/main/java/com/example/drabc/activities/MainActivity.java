@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         airways = binding.airwaysButton;
         breathing = binding.breathingButton;
         compressions = binding.compressionsButton;
-        mainLayout = binding.mainViewRoot;
+
     }
 //
 //    private void onDanger() {
