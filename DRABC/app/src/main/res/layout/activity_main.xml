@@ -1,5 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+    </data>
 
     <LinearLayout
         android:id="@+id/main_view_root"
@@ -13,57 +17,57 @@
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
             android:background="@color/colorAccent"
             android:text="D"
             android:textColor="@android:color/background_light"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:onClick="onDanger"/>
 
         <Button
             android:id="@+id/response_button"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
             android:background="@android:color/holo_orange_light"
             android:text="R"
             android:textColor="@android:color/background_light"
-            android:textSize="30sp"/>
+            android:textSize="30sp"
+            android:onClick="onResponse"/>
 
         <Button
             android:id="@+id/airways_button"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
             android:layout_below="@id/response_button"
             android:background="@android:color/holo_green_dark"
             android:text="A"
             android:textColor="@android:color/background_light"
-            android:textSize="30sp"/>
+            android:textSize="30sp"
+            android:onClick="onAirways"/>
 
         <Button
             android:id="@+id/breathing_button"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
             android:layout_below="@id/airways_button"
             android:background="@android:color/holo_blue_light"
             android:text="B"
             android:textColor="@android:color/background_light"
-            android:textSize="30sp"/>
+            android:textSize="30sp"
+            android:onClick="onBreathing"/>
 
         <Button
             android:id="@+id/compressions_button"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
             android:layout_below="@id/breathing_button"
             android:background="@android:color/holo_purple"
             android:text="C"
             android:textColor="@android:color/background_light"
-            android:textSize="30sp"/>
+            android:textSize="30sp"
+            android:onClick="onCompressions"/>
     </LinearLayout>
 </layout>

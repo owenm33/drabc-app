@@ -27,4 +27,9 @@
         <!-- <item name="android:windowExitAnimation">@anim/slide_down</item> -->
     </style>
 
+    <style name="MyDialogActivityTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
 </resources>

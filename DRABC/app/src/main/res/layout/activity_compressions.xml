@@ -2,20 +2,20 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <LinearLayout
-        android:id="@+id/response_step_view"
+        android:id="@+id/compressions_step_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".activities.ResponseActivity">
+        tools:context=".activities.CompressionsActivity">
 
         <TextView
-            android:id="@+id/response_heading"
+            android:id="@+id/compressions_heading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:gravity="center_horizontal"
-            android:text="RESPONSE"
+            android:text="COMPRESSIONS"
             android:textColor="@color/colorAccent"
             android:textSize="30sp" />
 

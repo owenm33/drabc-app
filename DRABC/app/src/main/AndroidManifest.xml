@@ -9,10 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".activities.DangerActivity"
+            android:theme="@style/MyDialogActivityTheme"/>
+        <activity android:name=".activities.ResponseActivity"
+            android:theme="@style/MyDialogActivityTheme"/>
+        <activity android:name=".activities.AirwaysActivity"
+            android:theme="@style/MyDialogActivityTheme"/>
+        <activity android:name=".activities.BreathingActivity"
+            android:theme="@style/MyDialogActivityTheme"/>
+        <activity android:name=".activities.CompressionsActivity"
+            android:theme="@style/MyDialogActivityTheme"/>
+        <activity
+            android:name=".activities.MainActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
