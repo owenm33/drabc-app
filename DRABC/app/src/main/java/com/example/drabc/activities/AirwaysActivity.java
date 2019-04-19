@@ -7,11 +7,10 @@ import android.view.ViewGroup;
 
 import com.example.drabc.R;
 import com.example.drabc.databinding.ActivityAirwaysBinding;
-import com.example.drabc.databinding.ActivityResponseBinding;
 
 public class AirwaysActivity extends AppCompatActivity {
 
-    private ActivityResponseBinding binding;
+    private ActivityAirwaysBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
