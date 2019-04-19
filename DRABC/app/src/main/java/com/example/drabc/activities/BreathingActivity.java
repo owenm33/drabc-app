@@ -1,5 +1,6 @@
 package com.example.drabc.activities;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,6 +22,16 @@ public class BreathingActivity extends AppCompatActivity {
     }
 
     public void onClose(View v) {
+        finish();
+    }
+
+    public void onNext(View v) {
+        startActivity(new Intent(BreathingActivity.this, CompressionsActivity.class));
+        finish();
+    }
+
+    public void onPrevious(View v) {
+        startActivity(new Intent(BreathingActivity.this, AirwaysActivity.class));
         finish();
     }
 }

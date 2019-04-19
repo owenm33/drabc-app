@@ -1,5 +1,6 @@
 package com.example.drabc.activities;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,6 +21,11 @@ public class DangerActivity extends AppCompatActivity {
     }
 
     public void onClose(View v) {
+        finish();
+    }
+
+    public void onNext(View v) {
+        startActivity(new Intent(DangerActivity.this, ResponseActivity.class));
         finish();
     }
 }

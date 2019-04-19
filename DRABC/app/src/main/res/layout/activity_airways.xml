@@ -2,6 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <LinearLayout
         android:id="@+id/airways_step_view"
         android:layout_width="match_parent"
@@ -9,24 +10,64 @@
         android:orientation="vertical"
         tools:context=".activities.AirwaysActivity">
 
-        <ImageButton
-            android:id="@+id/closeAirways"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#00FFFFFF"
-            android:layout_gravity="top|right"
-            app:srcCompat="@android:drawable/btn_dialog"
-            android:onClick="onClose"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"
+            android:layout_gravity="center|top"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/airways_heading"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|center_horizontal"
-            android:text="AIRWAYS"
-            android:textColor="@color/colorAccent"
-            android:textSize="30sp" />
+            <ImageButton
+                android:id="@+id/closeAirways"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00FFFFFF"
+                android:layout_gravity="top|end"
+                app:srcCompat="@android:drawable/btn_dialog"
+                android:onClick="onClose"/>
 
+            <TextView
+                android:id="@+id/response_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|top"
+                android:text="AIRWAYS"
+                android:textColor="@color/colorAccent"
+                android:textSize="30sp" />
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/airways_navigation_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center|bottom"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00FFFFFF"
+                android:scaleX="2"
+                android:scaleY="2"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_chevron_left_24dp"
+                android:onClick="onPrevious"/>
+
+            <ImageButton
+                android:id="@+id/nextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00FFFFFF"
+                android:baselineAlignBottom="false"
+                android:scaleX="2"
+                android:scaleY="2"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_chevron_right_24dp"
+                android:onClick="onNext"/>
+
+        </LinearLayout>
     </LinearLayout>
 </layout>
