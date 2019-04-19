@@ -10,7 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@drawable/danger"
         tools:context=".activities.MainActivity">
 
         <Button
@@ -29,7 +28,6 @@
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_below="@id/danger_button"
             android:background="@android:color/holo_orange_light"
             android:text="R"
             android:textColor="@android:color/background_light"
@@ -41,7 +39,6 @@
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_below="@id/response_button"
             android:background="@android:color/holo_green_dark"
             android:text="A"
             android:textColor="@android:color/background_light"
@@ -53,7 +50,6 @@
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_below="@id/airways_button"
             android:background="@android:color/holo_blue_light"
             android:text="B"
             android:textColor="@android:color/background_light"
@@ -65,7 +61,6 @@
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_below="@id/breathing_button"
             android:background="@android:color/holo_purple"
             android:text="C"
             android:textColor="@android:color/background_light"
