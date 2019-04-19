@@ -3,6 +3,7 @@ package com.example.drabc.activities;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.drabc.R;
@@ -17,5 +18,9 @@ public class AirwaysActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_airways);
         getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+    }
+
+    public void onClose(View v) {
+        finish();
     }
 }

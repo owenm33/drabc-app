@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
     <LinearLayout
         android:id="@+id/response_step_view"
@@ -8,17 +9,23 @@
         android:orientation="vertical"
         tools:context=".activities.ResponseActivity">
 
+        <ImageButton
+            android:id="@+id/closeResponse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            android:layout_gravity="top|right"
+            app:srcCompat="@android:drawable/btn_dialog"
+            android:onClick="onClose"/>
+
         <TextView
             android:id="@+id/response_heading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-            android:gravity="center_horizontal"
+            android:layout_gravity="center_vertical|center_horizontal"
             android:text="RESPONSE"
             android:textColor="@color/colorAccent"
             android:textSize="30sp" />
-
 
     </LinearLayout>
 </layout>

@@ -19,35 +19,29 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        danger = binding.dangerButton;
-        response = binding.responseButton;
-        airways = binding.airwaysButton;
-        breathing = binding.breathingButton;
-        compressions = binding.compressionsButton;
     }
 
+    /* Should we have @Override protected void onNewIntent(Intent intent) here?
+    ** And set android:launchMode="singleTop" for MainActivity in the manifest?
+    **/
+
     public void onDanger(View v) {
-        danger.setText("DANGER TEST!");
         startActivity(new Intent(MainActivity.this, DangerActivity.class));
     }
 
     public void onResponse(View v) {
-        response.setText("RESPONSE TEST!");
         startActivity(new Intent(MainActivity.this, ResponseActivity.class));
     }
 
     public void onAirways(View v) {
-        airways.setText("AIRWAYS TEST!");
         startActivity(new Intent(MainActivity.this, AirwaysActivity.class));
     }
 
     public void onBreathing(View v) {
-        breathing.setText("BREATHING TEST!");
         startActivity(new Intent(MainActivity.this, BreathingActivity.class));
     }
 
     public void onCompressions(View v) {
-        compressions.setText("COMPRESSIONS TEST!");
         startActivity(new Intent(MainActivity.this, CompressionsActivity.class));
     }
 
