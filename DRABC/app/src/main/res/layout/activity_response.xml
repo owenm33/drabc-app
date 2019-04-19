@@ -7,6 +7,7 @@
         android:id="@+id/danger_step_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@android:color/holo_orange_light"
         android:orientation="vertical"
         tools:context=".activities.ResponseActivity">
 
@@ -32,8 +33,17 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|top"
                 android:text="RESPONSE"
-                android:textColor="@color/colorAccent"
+                android:textColor="#FFFFFF"
                 android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/response_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:text="(Insert response text body here)"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
@@ -52,8 +62,8 @@
                 android:backgroundTint="#00FFFFFF"
                 android:scaleX="2"
                 android:scaleY="2"
-                android:layout_gravity="center_vertical"
-                app:srcCompat="@drawable/ic_chevron_left_24dp"
+                android:layout_gravity="top"
+                app:srcCompat="@drawable/ic_chevron_left_white_36dp"
                 android:onClick="onPrevious"/>
 
             <ImageButton
@@ -64,8 +74,8 @@
                 android:baselineAlignBottom="false"
                 android:scaleX="2"
                 android:scaleY="2"
-                android:layout_gravity="center_vertical"
-                app:srcCompat="@drawable/ic_chevron_right_24dp"
+                android:layout_gravity="top"
+                app:srcCompat="@drawable/ic_chevron_right_white_36dp"
                 android:onClick="onNext"/>
 
         </LinearLayout>

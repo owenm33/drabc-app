@@ -7,24 +7,25 @@
         android:id="@+id/breathing_step_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@android:color/holo_blue_light"
         android:orientation="vertical"
         tools:context=".activities.BreathingActivity">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="9"
             android:layout_gravity="center|top"
+            android:layout_weight="9"
             android:orientation="vertical">
 
             <ImageButton
                 android:id="@+id/closeBreathing"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#00FFFFFF"
                 android:layout_gravity="top|end"
-                app:srcCompat="@android:drawable/btn_dialog"
-                android:onClick="onClose"/>
+                android:backgroundTint="#00FFFFFF"
+                android:onClick="onClose"
+                app:srcCompat="@android:drawable/btn_dialog" />
 
             <TextView
                 android:id="@+id/breathing_heading"
@@ -32,8 +33,17 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|top"
                 android:text="BREATHING"
-                android:textColor="@color/colorAccent"
+                android:textColor="#FFFFFF"
                 android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/breathing_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:text="(Insert breathing text body here)"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
@@ -49,24 +59,24 @@
                 android:id="@+id/backButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="top"
                 android:backgroundTint="#00FFFFFF"
+                android:onClick="onPrevious"
                 android:scaleX="2"
                 android:scaleY="2"
-                android:layout_gravity="center_vertical"
-                app:srcCompat="@drawable/ic_chevron_left_24dp"
-                android:onClick="onPrevious"/>
+                app:srcCompat="@drawable/ic_chevron_left_white_36dp" />
 
             <ImageButton
                 android:id="@+id/nextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="top"
                 android:backgroundTint="#00FFFFFF"
                 android:baselineAlignBottom="false"
+                android:onClick="onNext"
                 android:scaleX="2"
                 android:scaleY="2"
-                android:layout_gravity="center_vertical"
-                app:srcCompat="@drawable/ic_chevron_right_24dp"
-                android:onClick="onNext"/>
+                app:srcCompat="@drawable/ic_chevron_right_white_36dp" />
 
         </LinearLayout>
     </LinearLayout>

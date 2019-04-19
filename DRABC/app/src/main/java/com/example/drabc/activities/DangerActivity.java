@@ -28,4 +28,12 @@ public class DangerActivity extends AppCompatActivity {
         startActivity(new Intent(DangerActivity.this, ResponseActivity.class));
         finish();
     }
+
+    public void onDanger(View v) {
+        // respond to danger being present
+    }
+
+    public void onNoDanger(View v) {
+        // respond to no danger being present
+    }
 }

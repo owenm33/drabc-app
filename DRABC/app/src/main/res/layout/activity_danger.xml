@@ -7,6 +7,7 @@
         android:id="@+id/danger_step_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorAccent"
         android:orientation="vertical"
         tools:context=".activities.DangerActivity">
 
@@ -21,10 +22,10 @@
                 android:id="@+id/closeDanger"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#00FFFFFF"
                 android:layout_gravity="top|end"
-                app:srcCompat="@android:drawable/btn_dialog"
-                android:onClick="onClose"/>
+                android:backgroundTint="#00FFFFFF"
+                android:onClick="onClose"
+                app:srcCompat="@android:drawable/btn_dialog" />
 
             <TextView
                 android:id="@+id/danger_heading"
@@ -32,8 +33,34 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|top"
                 android:text="DANGER"
-                android:textColor="@color/colorAccent"
+                android:textColor="#FFFFFF"
                 android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/danger_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:text="Is there any danger present?"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/button_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Yes"
+                android:onClick="onDanger"/>
+
+            <Button
+                android:id="@+id/button_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="No"
+                android:onClick="onNoDanger"/>
+
 
         </LinearLayout>
 
@@ -49,11 +76,11 @@
                 android:id="@+id/nextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
+                android:layout_gravity="top"
                 android:backgroundTint="#00FFFFFF"
                 android:scaleX="2"
                 android:scaleY="2"
-                app:srcCompat="@drawable/ic_chevron_right_24dp"
+                app:srcCompat="@drawable/ic_chevron_right_white_36dp"
                 android:onClick="onNext"/>
 
         </LinearLayout>
