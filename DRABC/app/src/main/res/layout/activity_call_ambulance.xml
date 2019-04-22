@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|top"
                 android:gravity="center_horizontal"
-                android:text="@string/call_emergency_question"
+                android:text="Would you like to call the ambulance?"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 

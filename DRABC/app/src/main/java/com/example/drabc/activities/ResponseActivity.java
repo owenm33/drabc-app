@@ -9,7 +9,6 @@ import android.content.pm.PackageManager;
 import android.databinding.DataBindingUtil;
 import android.net.Uri;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.DialogFragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,7 +17,6 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.drabc.R;
-import com.example.drabc.classes.PhoneDialogFragment;
 import com.example.drabc.databinding.ActivityResponseBinding;
 
 import static com.example.drabc.classes.Constants.MY_PERMISSIONS_REQUEST_CALL_PHONE;
@@ -58,32 +56,35 @@ public class ResponseActivity extends AppCompatActivity {
         editor = userDetails.edit();
         editor.putBoolean("R", true);
         editor.apply();
-        startActivity(new Intent(ResponseActivity.this, AirwaysActivity.class));
-        finish();
+        showCallAlert("Consider calling 000", "Ask casualty if they would like an ambulance. What did they say?", "Yes", "No");
     }
 
     public void onNoResponse(View v) {
         editor = userDetails.edit();
         editor.putBoolean("R", false);
         editor.apply();
-        showCallAlert();
+        showCallAlert("Please call 000", "Calling an ambulance is strongly recommended", "OK", "We'll be fine");
     }
 
-    public void showCallAlert() {
+    public void showCallAlert(String title, String message, String pos, String neg) {
         new AlertDialog.Builder(this)
-                .setTitle("Call 000")
-                .setMessage("Do you need an ambulance?")
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                .setTitle(title)
+                .setMessage(message)
+                .setNegativeButton(neg, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        if (!userDetails.getBoolean("R", false)) {
+                            Toast.makeText(getApplicationContext(), getResources().getString(R.string.call_emergency_warning), Toast.LENGTH_LONG).show();
+                        } else {
+                            startActivity(airwaysIntent);
+                            finish();
+                        }
+                    }
+                })
+                .setPositiveButton(pos, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         callEmergency();
-                    }
-                })
-                .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(getApplicationContext(), "WARNING: if the person is unresponsive, it is highly recommended that you contact emergency services", Toast.LENGTH_LONG);
-
                     }
                 })
                 .setIcon(android.R.drawable.ic_dialog_alert)
@@ -98,8 +99,9 @@ public class ResponseActivity extends AppCompatActivity {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     callEmergency();
                 } else {
-                    Toast.makeText(getApplicationContext(), "WARNING: if the person is unresponsive, it is highly recommended that you contact emergency services", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), getResources().getString(R.string.call_emergency_warning), Toast.LENGTH_LONG).show();
                 }
+                break;
             }
         }
     }

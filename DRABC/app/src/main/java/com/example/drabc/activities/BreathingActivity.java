@@ -44,6 +44,7 @@ public class BreathingActivity extends AppCompatActivity {
         editor.putBoolean("B", true);
         editor.apply();
         startActivity(new Intent(BreathingActivity.this, CompressionsActivity.class));
+        finish();
     }
 
     public void onNoBreathing(View v) {
@@ -51,5 +52,6 @@ public class BreathingActivity extends AppCompatActivity {
         editor.putBoolean("B", false);
         editor.apply();
         startActivity(new Intent(BreathingActivity.this, CompressionsActivity.class));
+        finish();
     }
 }

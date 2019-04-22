@@ -14,7 +14,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="4"
+            android:layout_weight="9"
             android:layout_gravity="center|top"
             android:orientation="vertical">
 
@@ -34,8 +34,7 @@
                 android:layout_gravity="center_horizontal|top"
                 android:text="@string/breathing_title"
                 android:textColor="#FFFFFF"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textSize="30sp"/>
 
             <TextView
                 android:id="@+id/breathing_body"
@@ -45,11 +44,10 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:gravity="center_horizontal"
-                android:paddingTop="25dp"
+                android:paddingTop="20dp"
                 android:text="@string/breathing_body"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                android:textSize="18sp"/>
 
         </LinearLayout>
 
@@ -93,8 +91,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleX="2"
-                android:scaleY="2"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
                 android:layout_gravity="top"
                 app:srcCompat="@drawable/ic_chevron_left_white_36dp"
                 android:onClick="onPrevious"/>
@@ -107,8 +105,8 @@
                 android:backgroundTint="#00FFFFFF"
                 android:baselineAlignBottom="false"
                 android:onClick="onNext"
-                android:scaleX="2"
-                android:scaleY="2"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
                 app:srcCompat="@drawable/ic_chevron_right_white_36dp" />
 
         </LinearLayout>
