@@ -26,13 +26,13 @@ public class PhoneDialogFragment extends DialogFragment {
         public void onDialogNegativeClick(DialogFragment dialog);
     }
 
-    PhoneDialogListener listener;
+    PhoneDialogListener mListener;
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         try {
-            listener = (PhoneDialogListener) context;
+            mListener = (PhoneDialogListener) context;
         } catch (ClassCastException e) {
             throw new ClassCastException(getActivity().toString()
                     + " must implement NoticeDialogListener");
@@ -47,13 +47,13 @@ public class PhoneDialogFragment extends DialogFragment {
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        listener.onDialogPositiveClick(PhoneDialogFragment.this);
+                        mListener.onDialogPositiveClick(PhoneDialogFragment.this);
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        listener.onDialogNegativeClick(PhoneDialogFragment.this);
+                        mListener.onDialogNegativeClick(PhoneDialogFragment.this);
                     }
                 });
         return builder.create();
