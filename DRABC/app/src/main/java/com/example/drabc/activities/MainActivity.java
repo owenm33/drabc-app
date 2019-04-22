@@ -1,6 +1,7 @@
 package com.example.drabc.activities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,10 +15,12 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
     private Button danger, response, airways, breathing, compressions;
+    private SharedPreferences userDetails;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        userDetails = getSharedPreferences("USER", MODE_PRIVATE);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
     }
 

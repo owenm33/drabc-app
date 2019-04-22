@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
-        android:id="@+id/danger_step_view"
+        android:id="@+id/response_step_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/holo_orange_light"
@@ -32,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|top"
-                android:text="RESPONSE"
+                android:text="@string/response_title"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp" />
 
@@ -44,6 +44,33 @@
                 android:text="(Insert response text body here)"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center|top"
+            android:layout_weight="2"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <Button
+                android:id="@+id/button_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:onClick="onResponse"
+                android:text="Yes" />
+
+            <Button
+                android:id="@+id/button_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:onClick="onNoResponse"
+                android:text="No" />
 
         </LinearLayout>
 

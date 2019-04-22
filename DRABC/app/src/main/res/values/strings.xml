@@ -2,10 +2,12 @@
     <string name="app_name">DRABC</string>
     <string name="danger_title">D A N G E R</string>
     <string name="danger_message">Is there any danger present?</string>
-    <string name="response_message">R E S P O N S E</string>
-    <string name="airways_message">A I R W A Y S</string>
-    <string name="breathing_message">B R E A T H I N G</string>
-    <string name="compressions_message">C O M P R E S S I O N S</string>
+    <string name="response_title">R E S P O N S E</string>
+    <string name="airways_title">A I R W A Y S</string>
+    <string name="breathing_title">B R E A T H I N G</string>
+    <string name="compressions_title">C O M P R E S S I O N S</string>
+
+    <string name="danger_body">Always scan the area for potential hazards prior to assisting another person.\n\n Is there any danger present \n(e.g. fire, live wires)?</string>
 
     <string name="in_danger">Yes, I\'m in danger</string>
     <string name="no_danger">No, I\'m safe</string>
