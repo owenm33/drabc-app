@@ -14,8 +14,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_weight="4"
             android:layout_gravity="center|top"
-            android:layout_weight="9"
             android:orientation="vertical">
 
             <ImageButton
@@ -32,18 +32,51 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|top"
-                android:text="BREATHING"
+                android:text="@string/breathing_title"
                 android:textColor="#FFFFFF"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/breathing_body"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
-                android:text="(Insert breathing text body here)"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center_horizontal"
+                android:paddingTop="25dp"
+                android:text="@string/breathing_body"
                 android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center|top"
+            android:layout_weight="2"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <Button
+                android:id="@+id/button_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:onClick="onBreathing"
+                android:text="Yes" />
+
+            <Button
+                android:id="@+id/button_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:onClick="onNoBreathing"
+                android:text="No" />
 
         </LinearLayout>
 
@@ -59,12 +92,12 @@
                 android:id="@+id/backButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="top"
                 android:backgroundTint="#00FFFFFF"
-                android:onClick="onPrevious"
                 android:scaleX="2"
                 android:scaleY="2"
-                app:srcCompat="@drawable/ic_chevron_left_white_36dp" />
+                android:layout_gravity="top"
+                app:srcCompat="@drawable/ic_chevron_left_white_36dp"
+                android:onClick="onPrevious"/>
 
             <ImageButton
                 android:id="@+id/nextButton"

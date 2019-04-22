@@ -1,16 +1,19 @@
 <resources>
     <string name="app_name">DRABC</string>
     <string name="danger_title">D A N G E R</string>
-    <string name="danger_message">Is there any danger present?</string>
     <string name="response_title">R E S P O N S E</string>
     <string name="airways_title">A I R W A Y S</string>
     <string name="breathing_title">B R E A T H I N G</string>
     <string name="compressions_title">C O M P R E S S I O N S</string>
 
     <string name="danger_body">Always scan the area for potential hazards prior to assisting another person.\n\n Is there any danger present \n(e.g. fire, live wires)?</string>
+    <string name="response_body">Are they conscious? Do they respond when you: \n - Say their name?\n - Squeeze their shoulders?\n - Roll your knuckle on their sternum?</string>
+    <string name="airways_body">Does their airway seem clear of obstructions? \n You might want to use your torch to check</string>
+    <string name="breathing_body">Are they breathing?\n - OBSERVE chest: is it moving up and down?\n - FEEL lower chest: is it expanding?\n - LISTEN by placing ear near mouth and nose: can you hear anything?\n</string>
+    <string name="compressions_body">Follow these steps carefully, and repeat CPR procedure until help arrives.\n\n\n Play ideal compressions tempo?</string>
+    <string name="description_body">Please enter a brief description of the problem (one or two words) to receive further instructions</string>
 
-    <string name="in_danger">Yes, I\'m in danger</string>
-    <string name="no_danger">No, I\'m safe</string>
+    <string name="call_emergency_question">Are you sure you\'d like to call emergency services?</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

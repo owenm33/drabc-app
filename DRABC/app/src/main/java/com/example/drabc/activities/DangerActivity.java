@@ -38,7 +38,7 @@ public class DangerActivity extends AppCompatActivity {
         editor.putBoolean("D", true);
         editor.apply();
         startActivity(new Intent(DangerActivity.this, DangerNumbersActivity.class));
-
+        finish();
         // respond to danger being present
 
     }

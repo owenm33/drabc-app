@@ -14,7 +14,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="9"
+            android:layout_weight="4"
             android:layout_gravity="center|top"
             android:orientation="vertical">
 
@@ -22,28 +22,61 @@
                 android:id="@+id/closeAirways"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#00FFFFFF"
                 android:layout_gravity="top|end"
-                app:srcCompat="@android:drawable/btn_dialog"
-                android:onClick="onClose"/>
+                android:backgroundTint="#00FFFFFF"
+                android:onClick="onClose"
+                app:srcCompat="@android:drawable/btn_dialog" />
 
             <TextView
                 android:id="@+id/airways_heading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|top"
-                android:text="AIRWAYS"
+                android:text="@string/airways_title"
                 android:textColor="#FFFFFF"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/airways_body"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
-                android:text="(Insert airways text body here)"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center_horizontal"
+                android:paddingTop="25dp"
+                android:text="@string/airways_body"
                 android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center|top"
+            android:layout_weight="2"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <Button
+                android:id="@+id/button_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:onClick="onAirways"
+                android:text="Yes" />
+
+            <Button
+                android:id="@+id/button_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:onClick="onNoAirways"
+                android:text="No" />
 
         </LinearLayout>
 

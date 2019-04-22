@@ -11,8 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.CallAmbulanceActivity"
-            android:theme="@style/MyDialogActivityTheme"/>
+        <activity
+            android:name=".activities.DescriptionActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".activities.CallAmbulanceActivity"
+            android:theme="@style/MyDialogActivityTheme" />
         <activity
             android:name=".activities.DangerNumbersActivity"
             android:theme="@style/MyDialogActivityTheme" />

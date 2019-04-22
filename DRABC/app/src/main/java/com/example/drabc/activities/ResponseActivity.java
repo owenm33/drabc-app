@@ -3,21 +3,22 @@ package com.example.drabc.activities;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 
 import com.example.drabc.R;
+import com.example.drabc.classes.PhoneDialogFragment;
 import com.example.drabc.databinding.ActivityResponseBinding;
 
-public class ResponseActivity extends AppCompatActivity {
+public class ResponseActivity extends AppCompatActivity
+                                implements PhoneDialogFragment.PhoneDialogListener {
 
     private ActivityResponseBinding binding;
     private SharedPreferences userDetails;
     private SharedPreferences.Editor editor;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +44,7 @@ public class ResponseActivity extends AppCompatActivity {
 
     public void onResponse(View v) {
         editor = userDetails.edit();
-        editor.putBoolean("R", false);
+        editor.putBoolean("R", true);
         editor.apply();
         startActivity(new Intent(ResponseActivity.this, AirwaysActivity.class));
 
@@ -51,10 +52,19 @@ public class ResponseActivity extends AppCompatActivity {
 
     public void onNoResponse(View v) {
         editor = userDetails.edit();
-        editor.putBoolean("R", true);
+        editor.putBoolean("R", false);
         editor.apply();
         startActivity(new Intent(ResponseActivity.this, CallAmbulanceActivity.class));
+    }
 
+    @Override
+    public void onDialogPositiveClick(DialogFragment dialog) {
 
     }
+
+    @Override
+    public void onDialogNegativeClick(DialogFragment dialog) {
+        
+    }
+
 }

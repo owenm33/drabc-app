@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/description_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activities.DescriptionActivity">
+
+        <TextView
+            android:id="@+id/description_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center_horizontal"
+            android:paddingTop="25dp"
+            android:text="@string/description_body"
+            android:textColor="#F7020000"
+            android:textSize="18sp" />
+
+        <AutoCompleteTextView
+            android:id="@+id/descriptionAutoComplete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:completionThreshold="1"
+            android:ellipsize="end"
+            android:freezesText="true"
+            android:gravity="center_horizontal"
+            android:paddingTop="25dp"
+            android:inputType="text"
+            android:singleLine="true"
+            android:text="Description of medical issue" />
+
+        <Button
+            android:id="@+id/button_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onHelp"
+            android:text="Help" />
+
+    </LinearLayout>
+</layout>
