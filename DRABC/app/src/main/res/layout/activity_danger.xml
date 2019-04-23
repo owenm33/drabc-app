@@ -3,6 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+        <variable
+            name="activity"
+            type="com.example.drabc.activities.DangerActivity"/>
+    </data>
+
     <LinearLayout
         android:id="@+id/danger_step_view"
         android:layout_width="match_parent"
@@ -11,21 +17,39 @@
         android:orientation="vertical"
         tools:context=".activities.DangerActivity">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="9"
-            android:layout_gravity="center|top"
-            android:orientation="vertical">
+            android:layout_gravity="top"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/closeDanger"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="top|end"
+                android:layout_alignParentEnd="true"
                 android:backgroundTint="#00FFFFFF"
                 android:onClick="onClose"
                 app:srcCompat="@android:drawable/btn_dialog" />
+
+            <ImageView
+                android:id="@+id/dangerIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/ic_flash_on_white_36dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:layout_gravity="center|top"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/danger_heading"
@@ -61,19 +85,19 @@
             android:paddingTop="10dp">
 
             <Button
-                android:id="@+id/button_yes"
+                android:id="@+id/buttonYes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:onClick="onDanger"
+                android:onClick="@{() -> activity.onAnswer(true)}"
                 android:text="Yes" />
 
             <Button
-                android:id="@+id/button_no"
+                android:id="@+id/buttonNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:onClick="onNoDanger"
+                android:onClick="@{() -> activity.onAnswer(false)}"
                 android:text="No" />
 
         </LinearLayout>

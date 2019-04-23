@@ -11,21 +11,39 @@
         android:orientation="vertical"
         tools:context=".activities.CompressionsActivity">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="9"
-            android:layout_gravity="center|top"
-            android:orientation="vertical">
+            android:layout_gravity="top"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/closeCompressions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="top|end"
+                android:layout_alignParentEnd="true"
                 android:backgroundTint="#00FFFFFF"
-                app:srcCompat="@android:drawable/btn_dialog"
-                android:onClick="onClose"/>
+                android:onClick="onClose"
+                app:srcCompat="@android:drawable/btn_dialog" />
+
+            <ImageView
+                android:id="@+id/compressionsIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/ic_pan_tool_white_36dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:layout_gravity="center|top"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/compressions_heading"

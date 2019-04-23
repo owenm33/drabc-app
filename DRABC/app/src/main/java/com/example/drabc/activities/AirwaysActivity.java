@@ -27,48 +27,28 @@ import static com.example.drabc.classes.Constants.MY_PERMISSIONS_REQUEST_CAMERA;
 
 public class AirwaysActivity extends AppCompatActivity {
 
-    private ActivityAirwaysBinding binding;
     private SharedPreferences userDetails;
-    private SharedPreferences.Editor editor;
     private boolean flashLightStatus = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_airways);
+        ActivityAirwaysBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_airways);
+        binding.setActivity(this);
         userDetails = getSharedPreferences("USER", MODE_PRIVATE);
         getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
     }
 
-    public void onClose(View v) {
-        finish();
-    }
-
-    public void onNext(View v) {
-        startActivity(new Intent(AirwaysActivity.this, BreathingActivity.class));
-        finish();
-    }
-
-    public void onPrevious(View v) {
-        startActivity(new Intent(AirwaysActivity.this, ResponseActivity.class));
-        finish();
-    }
-
-    public void onAirways(View v) {
-        editor = userDetails.edit();
-        editor.putBoolean("A", true);
+    public void onAnswer(boolean answer) {
+        SharedPreferences.Editor editor = userDetails.edit();
+        editor.putBoolean("A", answer);
         editor.apply();
-        startActivity(new Intent(AirwaysActivity.this, BreathingActivity.class));
-        finish();
-    }
-
-    public void onNoAirways(View v) {
-        editor = userDetails.edit();
-        editor.putBoolean("A", false);
-        editor.apply();
-//        startActivity(new Intent(AirwaysActivity.this, BreathingActivity.class));
-//        finish();
-        showCustomDialog();
+        if (answer) {
+            startActivity(new Intent(AirwaysActivity.this, BreathingActivity.class));
+            finish();
+        } else {
+            showCustomDialog();
+        }
     }
 
     public void onTorch(View v) {
@@ -83,7 +63,6 @@ public class AirwaysActivity extends AppCompatActivity {
 
     public void flashLight(boolean turnOn) {
         CameraManager cameraManager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);
-
         try {
             cameraManager.setTorchMode(cameraManager.getCameraIdList()[0], turnOn);
             flashLightStatus = !flashLightStatus;
@@ -113,5 +92,19 @@ public class AirwaysActivity extends AppCompatActivity {
                 CustomDialogFragment.newInstance(dView.getWidth(), dView.getHeight(), "Clear airways",
                         getResources().getString(R.string.airways_fragment_body), false);
         customDialog.show(fm, "fragment_custom_dialog");
+    }
+
+    public void onNext(View v) {
+        startActivity(new Intent(AirwaysActivity.this, BreathingActivity.class));
+        finish();
+    }
+
+    public void onPrevious(View v) {
+        startActivity(new Intent(AirwaysActivity.this, ResponseActivity.class));
+        finish();
+    }
+
+    public void onClose(View v) {
+        finish();
     }
 }

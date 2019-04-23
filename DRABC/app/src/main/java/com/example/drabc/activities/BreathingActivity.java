@@ -13,19 +13,26 @@ import com.example.drabc.databinding.ActivityBreathingBinding;
 
 public class BreathingActivity extends AppCompatActivity {
 
-    private ActivityBreathingBinding binding;
     private SharedPreferences userDetails;
-    private SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_breathing);
+        ActivityBreathingBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_breathing);
+        binding.setActivity(this);
         userDetails = getSharedPreferences("USER", MODE_PRIVATE);
         getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
     }
 
-    public void onClose(View v) {
+    public void onAnswer(boolean answer) {
+        SharedPreferences.Editor editor = userDetails.edit();
+        editor.putBoolean("B", answer);
+        editor.apply();
+        if (answer) {
+            startActivity(new Intent(BreathingActivity.this, DescriptionActivity.class));
+        } else {
+            startActivity(new Intent(BreathingActivity.this, CompressionsActivity.class));
+        }
         finish();
     }
 
@@ -39,19 +46,7 @@ public class BreathingActivity extends AppCompatActivity {
         finish();
     }
 
-    public void onBreathing(View v) {
-        editor = userDetails.edit();
-        editor.putBoolean("B", true);
-        editor.apply();
-        startActivity(new Intent(BreathingActivity.this, CompressionsActivity.class));
-        finish();
-    }
-
-    public void onNoBreathing(View v) {
-        editor = userDetails.edit();
-        editor.putBoolean("B", false);
-        editor.apply();
-        startActivity(new Intent(BreathingActivity.this, CompressionsActivity.class));
+    public void onClose(View v) {
         finish();
     }
 }

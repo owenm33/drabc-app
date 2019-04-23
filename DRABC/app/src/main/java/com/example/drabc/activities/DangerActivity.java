@@ -11,7 +11,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Html;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
@@ -24,9 +23,7 @@ import static com.example.drabc.classes.Constants.MY_PERMISSIONS_REQUEST_CALL_PH
 
 public class DangerActivity extends AppCompatActivity implements CustomDialogFragment.CustomDialogListener {
 
-    private ActivityDangerBinding binding;
     private SharedPreferences userDetails;
-    private SharedPreferences.Editor editor;
     String currentNumber;
     CustomDialogFragment customDialog;
     Intent callIntent, responseIntent;
@@ -36,19 +33,22 @@ public class DangerActivity extends AppCompatActivity implements CustomDialogFra
         super.onCreate(savedInstanceState);
         callIntent = new Intent(Intent.ACTION_CALL);
         responseIntent = new Intent(DangerActivity.this, ResponseActivity.class);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_danger);
+        ActivityDangerBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_danger);
+        binding.setActivity(this);
         userDetails = getSharedPreferences("USER", MODE_PRIVATE);
         getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-
     }
 
-    public void onClose(View v) {
-        finish();
-    }
-
-    public void onNext(View v) {
-        startActivity(new Intent(DangerActivity.this, ResponseActivity.class));
-        finish();
+    public void onAnswer(boolean answer) {
+        SharedPreferences.Editor editor = userDetails.edit();
+        editor.putBoolean("D", answer);
+        editor.apply();
+        if (answer) {
+            showCustomDialog();
+        } else {
+            startActivity(new Intent(DangerActivity.this, ResponseActivity.class));
+            finish();
+        }
     }
 
     public void onCall(String number) {
@@ -84,25 +84,6 @@ public class DangerActivity extends AppCompatActivity implements CustomDialogFra
         }
     }
 
-    public void onDanger(View v) {
-        editor = userDetails.edit();
-        editor.putBoolean("D", true);
-        editor.apply();
-//        startActivity(new Intent(DangerActivity.this, DangerNumbersActivity.class));
-//        finish();
-        showCustomDialog();
-
-    }
-
-    public void onNoDanger(View v) {
-        editor = userDetails.edit();
-        editor.putBoolean("D", false);
-        editor.apply();
-        // respond to no danger being present
-        startActivity(new Intent(DangerActivity.this, ResponseActivity.class));
-        finish();
-    }
-
     private void showCustomDialog() {
         FragmentManager fm = getSupportFragmentManager();
         View dView = this.getWindow().getDecorView();
@@ -111,5 +92,14 @@ public class DangerActivity extends AppCompatActivity implements CustomDialogFra
                         getResources().getString(R.string.danger_fragment_body), true);
         customDialog.setNewCustomDialogListener(this);
         customDialog.show(fm, "fragment_custom_dialog");
+    }
+
+    public void onNext(View v) {
+        startActivity(new Intent(DangerActivity.this, ResponseActivity.class));
+        finish();
+    }
+
+    public void onClose(View v) {
+        finish();
     }
 }
