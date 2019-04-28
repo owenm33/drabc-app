@@ -6,7 +6,7 @@
     <data>
         <variable
             name="activity"
-            type="com.example.drabc.activities.AirwaysActivity"/>
+            type="com.haymorg.drabc.activities.AirwaysActivity"/>
     </data>
 
     <LinearLayout

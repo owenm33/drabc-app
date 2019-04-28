@@ -1,4 +1,4 @@
-package com.example.drabc.activities;
+package com.haymorg.drabc.activities;
 
 import android.Manifest;
 import android.content.Intent;
@@ -15,11 +15,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.example.drabc.R;
-import com.example.drabc.classes.CustomDialogFragment;
-import com.example.drabc.databinding.ActivityDangerBinding;
+import com.haymorg.drabc.R;
+import com.haymorg.drabc.classes.CustomDialogFragment;
+import com.haymorg.drabc.databinding.ActivityDangerBinding;
 
-import static com.example.drabc.classes.Constants.MY_PERMISSIONS_REQUEST_CALL_PHONE;
+import static com.haymorg.drabc.classes.Constants.MY_PERMISSIONS_REQUEST_CALL_PHONE;
 
 public class DangerActivity extends AppCompatActivity implements CustomDialogFragment.CustomDialogListener {
 

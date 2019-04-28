@@ -6,7 +6,7 @@
     <data>
         <variable
             name="activity"
-            type="com.example.drabc.activities.ResponseActivity"/>
+            type="com.haymorg.drabc.activities.ResponseActivity"/>
     </data>
 
     <LinearLayout

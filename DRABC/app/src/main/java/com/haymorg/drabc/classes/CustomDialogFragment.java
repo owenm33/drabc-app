@@ -1,8 +1,5 @@
-package com.example.drabc.classes;
+package com.haymorg.drabc.classes;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
@@ -11,18 +8,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.view.WindowManager;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.drabc.R;
+import com.haymorg.drabc.R;
 
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import static com.example.drabc.classes.Constants.PHONE_NUMBERS;
+import static com.haymorg.drabc.classes.Constants.PHONE_NUMBERS;
 
 public class CustomDialogFragment extends DialogFragment {
 

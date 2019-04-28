@@ -1,4 +1,4 @@
-package com.example.drabc.activities;
+package com.haymorg.drabc.activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -8,8 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.drabc.R;
-import com.example.drabc.databinding.ActivityMainBinding;
+import com.haymorg.drabc.R;
+import com.haymorg.drabc.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 

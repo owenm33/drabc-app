@@ -1,4 +1,4 @@
-package com.example.drabc.activities;
+package com.haymorg.drabc.activities;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -16,10 +16,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.example.drabc.R;
-import com.example.drabc.databinding.ActivityResponseBinding;
-
-import static com.example.drabc.classes.Constants.MY_PERMISSIONS_REQUEST_CALL_PHONE;
+import com.haymorg.drabc.R;
+import com.haymorg.drabc.databinding.ActivityResponseBinding;
+import com.haymorg.drabc.classes.Constants;
 
 public class ResponseActivity extends AppCompatActivity {
 
@@ -77,7 +76,7 @@ public class ResponseActivity extends AppCompatActivity {
         if (ContextCompat.checkSelfPermission(ResponseActivity.this, Manifest.permission.CALL_PHONE)
                 != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(ResponseActivity.this, new String[]{Manifest.permission.CALL_PHONE},
-                    MY_PERMISSIONS_REQUEST_CALL_PHONE);
+                    Constants.MY_PERMISSIONS_REQUEST_CALL_PHONE);
         } else {
             Intent[] intents = {airwaysIntent, callIntent};
             startActivities(intents);
@@ -88,7 +87,7 @@ public class ResponseActivity extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         switch (requestCode) {
-            case MY_PERMISSIONS_REQUEST_CALL_PHONE: {
+            case Constants.MY_PERMISSIONS_REQUEST_CALL_PHONE: {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     callEmergency();
                 } else {

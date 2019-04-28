@@ -1,4 +1,4 @@
-package com.example.drabc.activities;
+package com.haymorg.drabc.activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -8,8 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.drabc.R;
-import com.example.drabc.databinding.ActivityBreathingBinding;
+import com.haymorg.drabc.R;
+import com.haymorg.drabc.databinding.ActivityBreathingBinding;
 
 public class BreathingActivity extends AppCompatActivity {
 

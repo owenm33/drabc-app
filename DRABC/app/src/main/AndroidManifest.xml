@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.drabc">
+    package="com.haymorg.drabc">
 
     <uses-permission android:name="android.permission.CALL_PHONE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -17,9 +17,6 @@
         <activity
             android:name=".activities.DescriptionActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity
-            android:name=".activities.CallAmbulanceActivity"
-            android:theme="@style/MyDialogActivityTheme" />
         <activity
             android:name=".activities.DangerNumbersActivity"
             android:theme="@style/MyDialogActivityTheme" />

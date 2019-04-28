@@ -1,4 +1,4 @@
-package com.example.drabc.activities;
+package com.haymorg.drabc.activities;
 
 import android.Manifest;
 import android.content.Context;
@@ -11,19 +11,18 @@ import android.hardware.camera2.CameraManager;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.content.ContextCompat;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.example.drabc.R;
-import com.example.drabc.classes.CustomDialogFragment;
-import com.example.drabc.databinding.ActivityAirwaysBinding;
+import com.haymorg.drabc.R;
+import com.haymorg.drabc.classes.CustomDialogFragment;
+import com.haymorg.drabc.databinding.ActivityAirwaysBinding;
 
-import static com.example.drabc.classes.Constants.MY_PERMISSIONS_REQUEST_CALL_PHONE;
-import static com.example.drabc.classes.Constants.MY_PERMISSIONS_REQUEST_CAMERA;
+import static com.haymorg.drabc.classes.Constants.MY_PERMISSIONS_REQUEST_CALL_PHONE;
+import static com.haymorg.drabc.classes.Constants.MY_PERMISSIONS_REQUEST_CAMERA;
 
 public class AirwaysActivity extends AppCompatActivity {
 

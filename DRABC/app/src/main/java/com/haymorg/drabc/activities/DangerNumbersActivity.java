@@ -1,10 +1,10 @@
-package com.example.drabc.activities;
+package com.haymorg.drabc.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.ViewGroup;
 
-import com.example.drabc.R;
+import com.haymorg.drabc.R;
 
 public class DangerNumbersActivity extends AppCompatActivity {
 

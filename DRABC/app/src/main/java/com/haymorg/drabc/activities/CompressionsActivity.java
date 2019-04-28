@@ -1,4 +1,4 @@
-package com.example.drabc.activities;
+package com.haymorg.drabc.activities;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
@@ -6,8 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import com.example.drabc.R;
-import com.example.drabc.databinding.ActivityCompressionsBinding;
+import com.haymorg.drabc.R;
+import com.haymorg.drabc.databinding.ActivityCompressionsBinding;
 
 public class CompressionsActivity extends AppCompatActivity {
 

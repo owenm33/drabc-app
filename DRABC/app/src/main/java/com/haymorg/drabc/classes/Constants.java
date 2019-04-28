@@ -1,10 +1,8 @@
-package com.example.drabc.classes;
+package com.haymorg.drabc.classes;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Constants {
     public final static int MY_PERMISSIONS_REQUEST_CALL_PHONE = 0;
@@ -28,6 +26,6 @@ public class Constants {
         put(1, Arrays.asList("NSW Poisons Info", "tel:131126"));
         put(2, Arrays.asList("Alcohol & Drug Info Sydney", "tel:93618000"));
         put(3, Arrays.asList("Flood, Storm or Tsunami", "tel:132500"));
-        put(4, Arrays.asList("Triple Zero", "tel:0415155516"));
+        put(4, Arrays.asList("Triple Zero", "tel:000"));
     }};
 }
