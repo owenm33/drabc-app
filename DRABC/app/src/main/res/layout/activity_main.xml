@@ -1,70 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
 
-    <data>
-    </data>
-
-    <LinearLayout
-        android:id="@+id/main_view_root"
+    <include
+        layout="@layout/app_bar_main"
         android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".activities.MainActivity">
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer" />
 
-        <Button
-            android:id="@+id/danger_button"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="@color/colorAccent"
-            android:onClick="onDanger"
-            android:text="D"
-            android:textColor="@android:color/background_light"
-            android:textSize="30sp" />
-
-        <Button
-            android:id="@+id/response_button"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="@android:color/holo_orange_light"
-            android:onClick="onResponse"
-            android:text="R"
-            android:textColor="@android:color/background_light"
-            android:textSize="30sp" />
-
-        <Button
-            android:id="@+id/airways_button"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="@android:color/holo_green_dark"
-            android:onClick="onAirways"
-            android:text="A"
-            android:textColor="@android:color/background_light"
-            android:textSize="30sp" />
-
-        <Button
-            android:id="@+id/breathing_button"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="@android:color/holo_blue_light"
-            android:onClick="onBreathing"
-            android:text="B"
-            android:textColor="@android:color/background_light"
-            android:textSize="30sp" />
-
-        <Button
-            android:id="@+id/compressions_button"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="@android:color/holo_purple"
-            android:onClick="onCompressions"
-            android:text="C"
-            android:textColor="@android:color/background_light"
-            android:textSize="30sp" />
-    </LinearLayout>
-</layout>
+</android.support.v4.widget.DrawerLayout>
