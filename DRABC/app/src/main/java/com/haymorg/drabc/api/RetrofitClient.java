@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitClient {
 
     //    private static final String BASE_URL = "http://192.168.178.117:3000/";
-    private static final String BASE_URL = "https://www.webmd.com/search/search_results/default.aspx";
+    private static final String BASE_URL = "https://nso8tnjo4g.execute-api.ap-southeast-2.amazonaws.com/dev/";
     private static RetrofitClient mInstance;
     private static Retrofit retrofit;
 

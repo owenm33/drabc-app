@@ -12,7 +12,13 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Toast;
 
 import com.haymorg.drabc.R;
+import com.haymorg.drabc.api.RetrofitClient;
 import com.haymorg.drabc.databinding.ActivityDescriptionBinding;
+import com.haymorg.drabc.models.ConditionsResponse;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import static com.haymorg.drabc.classes.Constants.SUGGESTED_ISSUES;
 
@@ -22,6 +28,8 @@ public class DescriptionActivity extends AppCompatActivity {
     private String problemDescription;
     ArrayAdapter<String> description_adapter;
     AutoCompleteTextView descriptionAutoText;
+    private boolean got_locations = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +41,9 @@ public class DescriptionActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        if (!suggestConditions()) {
+
+        }
         description_adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, SUGGESTED_ISSUES);
         descriptionAutoText = binding.descriptionAutoComplete;
         descriptionAutoText.setAdapter(description_adapter);
@@ -58,4 +69,32 @@ public class DescriptionActivity extends AppCompatActivity {
 //            Toast.makeText(getApplicationContext(), problemDescription, Toast.LENGTH_LONG).show();
         }
     }
+
+    private boolean suggestConditions() {
+        Call<ConditionsResponse> call = RetrofitClient
+                .getInstance()
+                .getApiInterface()
+                .getConditions();
+
+        call.enqueue(new Callback<ConditionsResponse>() {
+            @Override
+            public void onResponse(Call<ConditionsResponse> call, Response<ConditionsResponse> response) {
+                int statusCode = response.code();
+                if (statusCode == 200) {
+                    Toast.makeText(getApplicationContext(), "Got locations", Toast.LENGTH_LONG).show();
+                    got_locations = true;
+                } else if (statusCode == 400 || statusCode == 402 || statusCode == 502) {
+                    Toast.makeText(getApplicationContext(), "You failed hard", Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ConditionsResponse> call, Throwable t) {
+                Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
+        return got_locations;
+    }
+
+
 }

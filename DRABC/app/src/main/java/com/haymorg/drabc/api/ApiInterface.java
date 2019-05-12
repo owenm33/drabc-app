@@ -1,15 +1,17 @@
 package com.haymorg.drabc.api;
 
+import com.haymorg.drabc.models.ConditionsResponse;
+
 import retrofit2.Call;
-import retrofit2.http.Body;
 import retrofit2.http.GET;
-import retrofit2.http.Header;
 import retrofit2.http.Headers;
-import retrofit2.http.POST;
 
 public interface ApiInterface {
-//    @Headers("Content-Type: application/json")
-//    @POST("oauth/token")
+    @Headers("Content-Type: application/json")
+    @GET("dev/conditions")
+    Call<ConditionsResponse> getConditions();
+
+
 //    Call<LoginResponse> userLogin(
 //            @Body LoginRequest login
 //    );
