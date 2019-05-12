@@ -85,6 +85,7 @@ public class DescriptionActivity extends AppCompatActivity {
                 if (statusCode == 200) {
                     Toast.makeText(getApplicationContext(), "Got locations", Toast.LENGTH_LONG).show();
                     got_locations = true;
+//                    List<Condition> list =
                 } else if (statusCode == 400 || statusCode == 402 || statusCode == 502) {
                     Toast.makeText(getApplicationContext(), "You failed hard", Toast.LENGTH_LONG).show();
                 }
