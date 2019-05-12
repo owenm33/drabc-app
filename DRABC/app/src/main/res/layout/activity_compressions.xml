@@ -86,6 +86,23 @@
                 android:onClick="onClose"
                 android:text="Close" />
 
+            <Button
+                android:id="@+id/play_cpr"
+                android:layout_width="239dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onPlay"
+                android:text="@string/cpr_audio" />
+
+            <Button
+                android:id="@+id/stop_cpr"
+                android:layout_width="239dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onStop"
+                android:text="Stop" />
+
+
         </LinearLayout>
 
         <LinearLayout

@@ -16,6 +16,6 @@
     <string name="call_emergency_warning">WARNING: by not calling emergency services immediately, you are endangering the life of the casualty and may be responsible for their death</string>
     <string name="airways_fragment_body">If foreign material present, place casualty in recovery position and clear airway with fingers</string>
     <string name="danger_fragment_body">Insert list of numbers here</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="cpr_audio">Play</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
