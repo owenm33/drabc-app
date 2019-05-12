@@ -16,6 +16,8 @@ import com.haymorg.drabc.api.RetrofitClient;
 import com.haymorg.drabc.databinding.ActivityDescriptionBinding;
 import com.haymorg.drabc.models.ConditionsResponse;
 
+import java.util.ArrayList;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -71,14 +73,14 @@ public class DescriptionActivity extends AppCompatActivity {
     }
 
     private boolean suggestConditions() {
-        Call<ConditionsResponse> call = RetrofitClient
+        Call<ArrayList<ConditionsResponse>> call = RetrofitClient
                 .getInstance()
                 .getApiInterface()
                 .getConditions();
 
-        call.enqueue(new Callback<ConditionsResponse>() {
+        call.enqueue(new Callback<ArrayList<ConditionsResponse>>() {
             @Override
-            public void onResponse(Call<ConditionsResponse> call, Response<ConditionsResponse> response) {
+            public void onResponse(Call<ArrayList<ConditionsResponse>> call, Response<ArrayList<ConditionsResponse>> response) {
                 int statusCode = response.code();
                 if (statusCode == 200) {
                     Toast.makeText(getApplicationContext(), "Got locations", Toast.LENGTH_LONG).show();
@@ -89,7 +91,7 @@ public class DescriptionActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<ConditionsResponse> call, Throwable t) {
+            public void onFailure(Call<ArrayList<ConditionsResponse>> call, Throwable t) {
                 Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
