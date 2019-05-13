@@ -14,7 +14,6 @@ import com.haymorg.drabc.databinding.ActivityMainBinding;
 public class EmergencyActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
-    private Button danger, response, airways, breathing, compressions;
     private SharedPreferences userDetails;
 
     @Override
