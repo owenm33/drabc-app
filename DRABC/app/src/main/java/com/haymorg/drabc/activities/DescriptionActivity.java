@@ -31,6 +31,8 @@ public class DescriptionActivity extends AppCompatActivity {
     ArrayAdapter<String> description_adapter;
     AutoCompleteTextView descriptionAutoText;
     private boolean got_locations = false;
+    private static String[] MEDICAL_ISSUES;
+
 
 
     @Override
@@ -43,10 +45,10 @@ public class DescriptionActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        if (!suggestConditions()) {
+        while (!suggestConditions()) {
 
         }
-        description_adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, SUGGESTED_ISSUES);
+        description_adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, MEDICAL_ISSUES);
         descriptionAutoText = binding.descriptionAutoComplete;
         descriptionAutoText.setAdapter(description_adapter);
 
@@ -83,8 +85,16 @@ public class DescriptionActivity extends AppCompatActivity {
             public void onResponse(Call<ArrayList<ConditionsResponse>> call, Response<ArrayList<ConditionsResponse>> response) {
                 int statusCode = response.code();
                 if (statusCode == 200) {
-                    Toast.makeText(getApplicationContext(), "Got locations", Toast.LENGTH_LONG).show();
+                    ArrayList<ConditionsResponse> conditions = response.body();
+                    int listSize = conditions.size();
+                    MEDICAL_ISSUES = new String[listSize];
+                    for (int i = 0; i < listSize; i++) {
+                        MEDICAL_ISSUES[i] = response.body().get(i).getName();
+                    }
+//                    String firstCondition = response.body().get(1).getName();
+                    Toast.makeText(getApplicationContext(), "Got all conditions", Toast.LENGTH_LONG).show();
                     got_locations = true;
+
 //                    List<Condition> list =
                 } else if (statusCode == 400 || statusCode == 402 || statusCode == 502) {
                     Toast.makeText(getApplicationContext(), "You failed hard", Toast.LENGTH_LONG).show();
