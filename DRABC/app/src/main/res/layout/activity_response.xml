@@ -58,7 +58,7 @@
                 android:layout_gravity="center_horizontal|top"
                 android:text="@string/response_title"
                 android:textColor="#FFFFFF"
-                android:textSize="30sp" />
+                android:textSize="@dimen/_30ssp" />
 
             <TextView
                 android:id="@+id/response_body"
@@ -71,7 +71,7 @@
                 android:paddingTop="20dp"
                 android:text="@string/response_body"
                 android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:textSize="@dimen/_18ssp" />
 
         </LinearLayout>
 

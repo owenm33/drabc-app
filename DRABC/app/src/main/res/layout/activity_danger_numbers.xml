@@ -13,7 +13,7 @@
         android:layout_gravity="center|center_horizontal"
         android:gravity="center_horizontal|center_vertical"
         android:text="List all danger numbers here"
-        android:textSize="30sp"
+        android:textSize="@dimen/_30ssp"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="189dp" />
 </LinearLayout>
