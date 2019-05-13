@@ -31,7 +31,7 @@ public class DescriptionActivity extends AppCompatActivity {
     ArrayAdapter<String> description_adapter;
     AutoCompleteTextView descriptionAutoText;
     private boolean got_locations = false;
-    private static String[] MEDICAL_ISSUES;
+    private static String[] MEDICAL_ISSUES = {""};
 
 
 
@@ -45,12 +45,15 @@ public class DescriptionActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        while (!suggestConditions()) {
+        descriptionAutoText = binding.descriptionAutoComplete;
+        if(suggestConditions()) {
+            description_adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, MEDICAL_ISSUES);
+            descriptionAutoText.setAdapter(description_adapter);
+            description_adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, MEDICAL_ISSUES);
+            descriptionAutoText = binding.descriptionAutoComplete;
+            descriptionAutoText.setAdapter(description_adapter);
 
         }
-        description_adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, MEDICAL_ISSUES);
-        descriptionAutoText = binding.descriptionAutoComplete;
-        descriptionAutoText.setAdapter(description_adapter);
 
         descriptionAutoText.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long rowId) {
@@ -98,6 +101,7 @@ public class DescriptionActivity extends AppCompatActivity {
 //                    List<Condition> list =
                 } else if (statusCode == 400 || statusCode == 402 || statusCode == 502) {
                     Toast.makeText(getApplicationContext(), "You failed hard", Toast.LENGTH_LONG).show();
+                    got_locations = false;
                 }
             }
 
