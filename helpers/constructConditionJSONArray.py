@@ -15,10 +15,6 @@ conditions = []
 for index, js in enumerate(json_files):
     with open(os.path.join(path, js), encoding="utf8") as json_file:
         json_text = json.load(json_file)
-#        conditions.append({
-#                "id": js.split()[2],
-#                "name": json_text['Name'],
-#                "treatment": json_text['TreatmentDescription']})
         condition = {}
         condition['id'] = js.split()[2]
         condition['name'] = json_text['Name']
