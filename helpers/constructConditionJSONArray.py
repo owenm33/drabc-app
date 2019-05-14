@@ -21,7 +21,5 @@ for index, js in enumerate(json_files):
         condition['treatment'] = json_text['TreatmentDescription']
         conditions.append(condition)
    
-
-
 with open('conditions.json', 'w') as outfile:
     json.dump(conditions, outfile, indent=4)
