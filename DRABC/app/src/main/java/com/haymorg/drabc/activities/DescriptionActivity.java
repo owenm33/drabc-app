@@ -2,6 +2,7 @@ package com.haymorg.drabc.activities;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,16 +14,18 @@ import android.widget.Toast;
 
 import com.haymorg.drabc.R;
 import com.haymorg.drabc.api.RetrofitClient;
+import com.haymorg.drabc.classes.CustomDialogFragment;
 import com.haymorg.drabc.databinding.ActivityDescriptionBinding;
 import com.haymorg.drabc.models.ConditionsResponse;
+import com.haymorg.drabc.models.Treatment;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
-import static com.haymorg.drabc.classes.Constants.SUGGESTED_ISSUES;
 
 public class DescriptionActivity extends AppCompatActivity {
 
@@ -31,8 +34,9 @@ public class DescriptionActivity extends AppCompatActivity {
     ArrayAdapter<String> description_adapter;
     AutoCompleteTextView descriptionAutoText;
     private boolean got_locations = false;
-    private static String[] MEDICAL_ISSUES = {""};
-
+    ArrayList<String> diagnoses = new ArrayList<>();
+    ArrayList<String> diagnosis_id = new ArrayList<>();
+    String condition, treatmentID, treatmentDescription;
 
 
     @Override
@@ -46,22 +50,19 @@ public class DescriptionActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         descriptionAutoText = binding.descriptionAutoComplete;
-        if(suggestConditions()) {
-            description_adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, MEDICAL_ISSUES);
-            descriptionAutoText.setAdapter(description_adapter);
-            description_adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, MEDICAL_ISSUES);
-            descriptionAutoText = binding.descriptionAutoComplete;
-            descriptionAutoText.setAdapter(description_adapter);
-
-        }
+        description_adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, diagnoses);
+        descriptionAutoText.setAdapter(description_adapter);
+        suggestConditions();
 
         descriptionAutoText.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long rowId) {
                 if (view != null) {
-//                    problemDescription = (String) parent.getItemAtPosition(position);
+                    condition = (String) parent.getItemAtPosition(position);
+                    treatmentID = diagnosis_id.get(diagnoses.indexOf(condition));
                     InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                     imm.hideSoftInputFromWindow(view.getApplicationWindowToken(), 0);
                     descriptionAutoText.clearFocus();
+                    binding.buttonHelp.setEnabled(true);
                 }
             }
         });
@@ -70,14 +71,49 @@ public class DescriptionActivity extends AppCompatActivity {
     public void onHelp(View v) {
         problemDescription = descriptionAutoText.getText().toString();
 
-        if (problemDescription == null || problemDescription.trim().isEmpty() || problemDescription.equals("Description of medical issue")) {
+        if (problemDescription.trim().isEmpty() || problemDescription.equals("Description of medical issue")) {
             Toast.makeText(getApplicationContext(), "Please enter a brief description of the problem", Toast.LENGTH_LONG).show();
         } else {
-//            Toast.makeText(getApplicationContext(), problemDescription, Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(), "This is wheree another API call will be made, using the ID of " + problemDescription + " to get its treatment", Toast.LENGTH_LONG).show();
+            getTreatment(treatmentID);
         }
     }
 
-    private boolean suggestConditions() {
+    private void showCustomDialog(String condition, String treatment) {
+        FragmentManager fm = getSupportFragmentManager();
+        View dView = this.getWindow().getDecorView();
+        CustomDialogFragment customDialog =
+                CustomDialogFragment.newInstance(dView.getWidth(), dView.getHeight(), condition,
+                        treatment, false);
+        customDialog.show(fm, "fragment_custom_dialog");
+    }
+
+    private void getTreatment(String id) {
+        Call<Treatment> call = RetrofitClient
+                .getInstance()
+                .getApiInterface()
+                .getTreatment(id);
+
+        call.enqueue(new Callback<Treatment>() {
+            @Override
+            public void onResponse(Call<Treatment> call, Response<Treatment> response) {
+                int statusCode = response.code();
+                if (statusCode == 200) {
+                    treatmentDescription = response.body().getTreatment();
+                    showCustomDialog(condition, treatmentDescription);
+                } else {
+                    Toast.makeText(getApplicationContext(), "Couldn't retrieve treatment suggestions; please check your internet connection", Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Treatment> call, Throwable t) {
+                Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    private void suggestConditions() {
         Call<ArrayList<ConditionsResponse>> call = RetrofitClient
                 .getInstance()
                 .getApiInterface()
@@ -90,18 +126,12 @@ public class DescriptionActivity extends AppCompatActivity {
                 if (statusCode == 200) {
                     ArrayList<ConditionsResponse> conditions = response.body();
                     int listSize = conditions.size();
-                    MEDICAL_ISSUES = new String[listSize];
                     for (int i = 0; i < listSize; i++) {
-                        MEDICAL_ISSUES[i] = response.body().get(i).getName();
+                        description_adapter.add(response.body().get(i).getName());
+                        diagnosis_id.add(response.body().get(i).getId());
                     }
-//                    String firstCondition = response.body().get(1).getName();
-                    Toast.makeText(getApplicationContext(), "Got all conditions", Toast.LENGTH_LONG).show();
-                    got_locations = true;
-
-//                    List<Condition> list =
-                } else if (statusCode == 400 || statusCode == 402 || statusCode == 502) {
-                    Toast.makeText(getApplicationContext(), "You failed hard", Toast.LENGTH_LONG).show();
-                    got_locations = false;
+                } else {
+                    Toast.makeText(getApplicationContext(), "Couldn't retrieve condition list; please check your internet connection", Toast.LENGTH_LONG).show();
                 }
             }
 
@@ -110,7 +140,6 @@ public class DescriptionActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
-        return got_locations;
     }
 
 
