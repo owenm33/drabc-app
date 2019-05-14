@@ -1,0 +1,367 @@
+[
+    {
+        "id": "102",
+        "name": "Back pain",
+        "treatment": "Most back pain treatments can be conservative (be treated without surgery). Posture training is useful.  Application of heat and transfer of anti-inflammatory drugs as well. In most cases, the back pain to improve with these measures within a short time. The treatment of lumbar disc herniation is discussed in a separate article. For long lasting stronger back pain or fever accompanying, a medical clarification is urgently needed, as it can be an infection in the vertebral bone or an offshoot of an ulcer."
+    },
+    {
+        "id": "113",
+        "name": "Acute inflammation of lung",
+        "treatment": "It\u2019s important to consult your doctor if you have pneumonia.  Your doctor can confirm the presence of pneumonia during a clinical examination and with X-rays and prescribe antibiotics.  There are vaccines against certain bacteria (Streptococcus pneumoniae and Haemophilus influenzae) that have been developed to protect patients at risk (children under 2, the elderly, people with compromised immune systems, people with chronic illnesses)."
+    },
+    {
+        "id": "128",
+        "name": "Blood vessel expansion around anus",
+        "treatment": "Treatment for hemorrhoids includes important measures as regulating bowel movements and keeping a proper, fiber-rich diet. Besides that, medications can also be administered to increase blood flow or to decrease pain. In serious cases, bulges in the mucosa can be removed in a minor operation."
+    },
+    {
+        "id": "130",
+        "name": "Abdominal hernia",
+        "treatment": "Typical symptoms and palpatory findings lead the doctor to the correct diagnosis. If a hernia is not visible or palpable, because it might have developed towards the back, a CT scan will be necessary as well. To avoid dangerous complications (dying of intestinal loop when stuck in the hernia opening), an abdominal wall hernia should be treated surgically."
+    },
+    {
+        "id": "134",
+        "name": "Ankle injury",
+        "treatment": "If the injury affects only the ankle\u2019s ligaments, no surgery is necessary. A temporary immobilisation with a plaster-splint, elevation, local cryotherapy and decongestive medication can be applied. In most cases, a preventive blood thinning needs to be prescribed to prevent the risk of thrombosis that can be caused by the immobilisation. After six weeks, a stable ligament recovery can be assumed. If the ankle injury also causes a fracture of the lower leg bones, in most cases a surgery is necessary to stabilise with plates and screws. A long-term consequence, for example following a meniscus injury, is a higher risk of arthrosis."
+    },
+    {
+        "id": "152",
+        "name": "Benign proliferation of uterine lining tissue",
+        "treatment": "If the misplaced tissue reaches the Fallopian tubes it may cause decreased fertility. Generally endometriosis is known to lead to an increased rate of abortion. If endometriosis affects the ureter, it can cause a backflow of urine. Treatment with hormones can improve symptoms. Besides that, pain can be reduced with anti-inflammatory medication. If hormone therapy shows no results, an operation to remove the lesions can bring about improvements."
+    },
+    {
+        "id": "170",
+        "name": "Abortion",
+        "treatment": "Generally, a pregnancy can be terminated medicinally or instrumentally/surgically, sometimes a combination of both treatments can be necessary. For a medicinal abortion, contractions-causing medication will be administered to drive out the fruit. Possible instrumental measures are suction-curettage, curettage or even the removal of the uterus."
+    },
+    {
+        "id": "171",
+        "name": "Achilles tendon tear",
+        "treatment": "The typical accident mechanism and the symptoms are indications for the doctor. To confirm the diagnosis, an ultrasound or MRI will usually be done. Conservative and operative treatments can be considered, depending on whether the tendon is ruptured completely or partially. If the ultrasound shows a partial rupture, a special shoe or plaster cast that stretches the foot may be sufficient. Is the tendon ruptured completely, it has to be surgically sutured and will be immobilized with a special shoe afterwards."
+    },
+    {
+        "id": "182",
+        "name": "Aneurysm of the main artery",
+        "treatment": "Aortic aneurysms discovered by chance are measured and observed. Often, the bulge is filled with clotted blood (thrombosis). Small particles can tear from this thrombosis, block a smaller vessel behind (embolism) and lead to impaired blood circulation. If the aneurysm reaches a certain size, the risk of a spontaneous rupture is too big, so that the bulge should be treated surgically, if the patient\u2019s condition allows. In most cases, stents will be implanted. "
+    },
+    {
+        "id": "192",
+        "name": "Arthrosis",
+        "treatment": "Advanced osteoarthritis can cause defective positioning of the joint as well as limitations to movement. Knees, hips, and fingers are all commonly affected. Therapy for osteoarthritis seeks to reduce pain and also to avoid any bone changes. Weight reduction in the case of obesity and regular, gentle exercises for the purpose of maintaining function in the joints are both important factors in treatment. If necessary, painkillers such as non-steroidal anti-inflammatory drugs (NSAIDs) or local steroids may be prescribed. Additionally, substances that slow the process of damage to the cartilage may be incorporated into treatment. At the end stage of osteoarthritis, an operation to replace the affected joint with an artificial one often improves symptoms and quality of life."
+    },
+    {
+        "id": "198",
+        "name": "Baker's cyst",
+        "treatment": "Treating the underlying disease can lead to a relief of symptoms caused by a Baker\u2019s cyst. If treatment of the underlying disease doesn\u2019t help or if the Baker\u2019s cyst becomes too large, then it needs to be removed via operation."
+    },
+    {
+        "id": "199",
+        "name": "Bacterial skin infection",
+        "treatment": "Minor bacterial skin infections may resolve spontaneously without treatment (such as impetigo and folliculitis). Serious and persistent bacterial infections are usually treated with antibiotics (cellulitis and boils). The types of antibiotics which are used include topical creams and oral medication or injections. Before commencing antibiotics it is recommended that samples are taken in order to determine which organism is responsible for the infection and whether or not they have any antibiotic resistance. If the infection is serious, immediate treatment with a broad-spectrum antibiotic may be indicated. Once the specific organism that has caused the infection has been determined, the broad-spectrum antibiotic may be replaced by a specific antibiotic that is directed against the particular organism."
+    },
+    {
+        "id": "200",
+        "name": "White skin cancer",
+        "treatment": "Basal-cell carcinoma can be surgically removed.  The treatment requires large areas of surrounding  tissue to be removed, to assure that all tumor is excised.  If an operation is not possible due to any number of reasons, another option is to treat the tumor with radiation.  This method is not as guaranteed as surgical removal and after several years the skin may show signs of radiation damage.  If you have basal-cell carcinoma, your doctor can talk to you about which method is the best for you.  Metastasis is very rare for basal-cell carcinoma.  After the tumor excision, relapse is possible, though not frequent.  Furthermore, the risk of developing basal-cell carcinoma in other parts of the body is increased by 50% after having a first tumor.  An annual checkup after the removal of a tumor is recommended for the purpose of identifying additional lesions."
+    },
+    {
+        "id": "202",
+        "name": "Allergy to bee or wasp venom",
+        "treatment": "If you suspect an allergy to bee venom, your doctor can perform a skin test for allergies. If the allergy is confirmed, it is highly recommended that you carry an emergency kit with medication at all times, so that you can suppress an allergic reaction."
+    },
+    {
+        "id": "204",
+        "name": "Bladder cancer",
+        "treatment": "If the symptoms listed above appear, then an ultrasound should be done to eliminate the possibility of other diseases. Next, an endoscopy of the bladder is performed, which allows a view of the bladder\u2019s surface. Abnormalities around the bladder can then be cleared or samples can be taken. Sometimes it\u2019s possible to obtain cells to determine if the type of cancer. This is done with repeated flushing of the bladder via a urinary catheter. To determine whether it\u2019s a case of micro- or macrohematuria, a urogram is conducted. With consideration to the findings and the general condition of the patient, the patient and doctor can discuss proper treatment. The following options for treatment are available: complete removal of the tumor via cystoscopy, local chemotherapy (direct to the bladder), BCG immunotherapy, partial or complete removal of the bladder and surrounding lymph nodes via operation (with different methods for allowing urine to drain), radiation therapy, and chemotherapy (in combination). The decision must be made on an individual basis for each patient. Discussing options with your doctor is highly recommended."
+    },
+    {
+        "id": "218",
+        "name": "Breakbone fever",
+        "treatment": "Dengue fever generally heals after ten days without symptoms. Very seldom will a bad case run its course without a skin rash, but still with hemorrhagic diathesis (tendency to bleed), hepatomegaly (swelling of the liver), and symptoms of shock (Dengue shock syndrome). In these cases, symptoms can be treated with blood and blood-product infusions."
+    },
+    {
+        "id": "227",
+        "name": "Eversion of the eyelid",
+        "treatment": "Treatment of ectropion will be customized based on the underlying cause and its severity. Mild cases of ectropion may not need any treatment. If the symptoms are minor, a doctor or ophthalmologist can advise the affected person about ways to take care of the eyes and relieve the symptoms at home. Lubricating drops can protect the cornea from further damage and provide relief while awaiting treatment. Inappropriate wiping of the affected eye can make the condition to become worse. It is recommended to always use an \u2018up and in\u2019 movement to wipe the eyes from the outer up to the nose. In more severe cases, a surgery may be recommended to correct the issue."
+    },
+    {
+        "id": "248",
+        "name": "Yellow plague",
+        "treatment": "A treatment of the cause, which would be killing the virus, does not exist. It is only possible, to treat the patients in an intensive care unit to relieve the symptoms and to balance out the loss of liquids. Even though, the adult mortality rate lies between 20% and 50%. It is therefore highly recommended to find out about a vaccination recommendation before travelling to tropical countries. As this might be necessary for other diseases as well, and because especially the yellow fever vaccination requires certain waiting periods between other vaccinations, you should plan your vaccinations as early as possible."
+    },
+    {
+        "id": "264",
+        "name": "Brain tumor",
+        "treatment": "Treatments of brain tumors depend on the cause, type, location and severity. Normally the supportive treatment includes drugs such as anti-seizure or antiepileptic drugs, steroids and sometimes surgery. Steroids decrease the swelling of the brain and antiepileptic drugs may help to prevent seizures. In addition, radiation therapy and chemotherapy are also commonly used to treat malignant brain tumors. If you experience any of the above-mentioned symptoms without an explained cause, you should consult a specialist for further examinations and follow-up."
+    },
+    {
+        "id": "27",
+        "name": "Acne",
+        "treatment": "Certain forms of acne can leave unsightly scars behind, which may impact the patient. Early treatment can prevent or partly alleviate this issue. Treatment aims to clear the ducts of sebaceous glands, reduce the production of sebum, and to relieve inflammation from abnormalities in the skin by fighting certain bacteria of the skin. Treatment usually takes a long time and in extreme cases should be implemented by a skin doctor (dermatologist)."
+    },
+    {
+        "id": "273",
+        "name": "Bowel obstruction",
+        "treatment": "The treatment depends on cause and severity of the condition. Most cases of obstructive ileus require surgical therapy to remove the blockage; functional ileus can sometimes be treated conservatively."
+    },
+    {
+        "id": "277",
+        "name": "Bleeding disorder",
+        "treatment": "Treatment of coagulopathy strongly depends on the underlying disease. They may include the following; however, those treatments can\u2019t be applied in all cases: providing clotting factors, substantial haemostasis and diligent sutures after injuries, medication, change of dosage of e.g. Marcumar or Aspirin, transfusion of blood platelets. Absence of measures that carry a high risk of bleeding, such as intramuscular injections. In any case, coagulopathy should be treated by a specialist."
+    },
+    {
+        "id": "286",
+        "name": "Water accumulation in the lungs",
+        "treatment": "A pulmonary oedema can develop very fast from stage 1 to stage 4 and should be treated immediately. The patient should sit down and let the legs hang down. The patient should be calmed until the doctor arrives. He will initially provide oxygen via nasal probe or mask. In some very severe cases, machine ventilation might be necessary immediately. The treatment of a pulmonary oedema depends on its causes. Medications can be injected, swallowed or inhaled. In-patient treatment is definitely necessary."
+    },
+    {
+        "id": "291",
+        "name": "Breast cancer",
+        "treatment": "Appropriate therapy is dependent on the spread and type of tumor. In early stages, surgery followed by radiation can preserve the breast and chemotherapy before the operation can be used to reduce the size of the tumor. In the case of larger tumors, the entire breast together with the lymph nodes of the underarm need to be removed, after, could be followed by chemo, hormone, or radiation therapy. Removal of the lymph nodes under the arms can cause swelling in the relevant arm. Prognosis is very dependent on how far the tumor has spread."
+    },
+    {
+        "id": "297",
+        "name": "Black skin cancer",
+        "treatment": "The treatment of melanoma is to surgically remove the affected areas including a safety distance. Additional chemotherapy can kill the cancer cells to prevent the cancer from returning. Immunotherapy with medications like interleukin or interferon can be used to strengthen the immune system to fight against the cancer. Radiation therapy can be used if a patient cannot get surgery for reasons like bad general condition or a concomitant disease. If there is any suspicious symptom of melanoma, it is recommended that you consult a dermatologist for early intervention because the risk for metastases is directly depending on the depth of the melanoma."
+    },
+    {
+        "id": "310",
+        "name": "Bekhterev's disease",
+        "treatment": "Ankylosing spondylitis cannot be cured, but treatment can clearly reduce the symptoms. Medications such as nonsteroidal anti-inflammatory drugs can relieve the pain, stiffness and inflammation. Recent medications, which prevent autoimmune inflammations, such as Etanercept and Adalimumab can be used in more severe cases. Additionally, a doctor may refer the patient to a physical therapist. Physical therapy can help patients with pain relief and even the improvement of physical strength and flexibility. In some cases, surgery may be considered to improve the symptoms."
+    },
+    {
+        "id": "329",
+        "name": "Water accumulation in the tissues",
+        "treatment": "Accumulation of fluids itself is not usually dangerous for the patient. One exception is pulmonary edema (edema of the lungs), which can develop due to a weak heart. The cause for edema in the legs determines the health-related consequences. The most common case is of weakness in the vain valves in the legs (chronic vein insufficiency), which can lead to an insufficient supply of blood and oxygen to the skin, affecting wounds on the calf to heal slowly or poorly. Treatment for leg edema is possible with the use of compression stocking and long term treatment of wounds. In rare cases, operation is necessary. If a kidney or heart issue is found to be the underlying cause of edema, then diagnosis by a doctor is absolutely necessary to establish proper treatment, since it may be a serious condition."
+    },
+    {
+        "id": "334",
+        "name": "Benign bone tumor",
+        "treatment": "The treatments of a benign bone tumor will depend on the severity. Some benign bone tumors may recover after a period of time and do not need treatment. It is recommended to visit a doctor regularly and have a regular follow-up. Regular imaging tests such as x-rays can see if the tumor shrinks or grows. For some cases, surgery may be needed to remove the tumor."
+    },
+    {
+        "id": "341",
+        "name": "Anal venous thrombosis",
+        "treatment": "A perianal hematoma is not a serious problem and usually resolves spontaneously after a period of time. Conservative treatments like cold compresses and regular sitz-baths can help to reduce the swelling and pain. Patients can also use analgesics to relieve the pain. Ointments and topical cream are also recommended. Conservatively treated, a perianal thrombosis either resolves (as small ones often do) or drains due to a lesion in the perianal skin (as bigger ones often do). A doctor may suggest surgery to excise the perianal hematoma. If it is detected and excised within the first two days, the pain will be alleviated immediately and the healing process will be much speedier."
+    },
+    {
+        "id": "345",
+        "name": "Whooping cough",
+        "treatment": "To prevent getting whooping cough, already infants should take vaccines. Once infected antibiotic drugs can be used to treat whooping cough. Antibiotics can treat the infection, but it cannot treat the cough. Additionally, also cough medications often cannot improve the condition of coughing satisfyingly. It is recommended to use humidifier to keep the air moist to alleviate the symptom of coughing. People with worsening condition will need to be hospitalized to prevent a further lung infection."
+    },
+    {
+        "id": "346",
+        "name": "Benign tumor of the adrenal medulla",
+        "treatment": "A doctor can receive a first evidence of pheochromocytoma with a 24h blood pressure measurement and various further blood or urine tests. An ultrasound, computer tomography or magnetic resonance tomography can confirm the diagnosis. Eventually, options for tumor removal should be considered. The definitive treatment is surgery and until the tumor is removed, a doctor should control the patient\u2019s blood pressure regularly. An endocrinologist should be consulted. He will design a treatment plan for the affected person in specific. For cases of malignant pheochromocytomas which cannot be cured by surgery or radiation therapy, a chemotherapy may be necessary."
+    },
+    {
+        "id": "397",
+        "name": "Bowel incontinence",
+        "treatment": "Initial bowel incontinence should be comprehensively examined by a doctor to determine its causes. Possible measures include examination of the anal region, probing of the rectum, stool tests, ultrasound, colonoscopy or even a computer tomography or magnetic resonance tomography. Not all measures are necessary to identify the causes. Treatment depends on the causes. If a causal treatment is not possible, the patient should be advised as good as possible on dealing with bowel incontinence and on existing aids, to allow a greatly unrestricted life with the condition. Patients should consult a doctor frequently to diagnose complications such as depression or infections of the skin of the genital area early and treat them accordingly."
+    },
+    {
+        "id": "454",
+        "name": "Auditory vertigo",
+        "treatment": "The treatments of M\u00e9ni\u00e8re's disease include: 1) Medications: diazepam, lorazepam, meclizine and glycopyrrolate can relieve the symptoms of dizziness and help to shorten the attack. 2) Diuretics: limiting the intake of salt and using diuretic drugs avoid excessive fluid accumulating in the body and control the symptom of dizziness. 3) Dietary and behavioral changes: no smoking and no alcohol drinking help to reduce related symptoms. 4) Cognitive therapy: it can help people reduce their anxiety about future attacks. 5) Injections of medications: injection of antibiotics can help to reduce the symptom of vertigo, and injection of corticosteroid helps to decrease dizziness. 6) Surgery: a surgery may be consider if all the treatments mentioned above could not improve the disease."
+    },
+    {
+        "id": "456",
+        "name": "Abscess of the tonsils",
+        "treatment": "During the examination the doctor usually notices a badly swollen and red side of the palate that is painful to the touch. In some cases the abscess develops behind the tonsils and cannot be seen easily. The abscesses' dimensions will be determined via ultrasound to start the appropriate treatment. If the abscess is small, treatment with antibiotics can be tried. Bigger abscesses are going to be split surgically and drained for 4 days, while giving antibiotics at the same time. This is followed by a removal of the tonsils (tonsillectomy). If the abscess is very deep and cannot be opened and drained, the tonsillectomy will be done immediately."
+    },
+    {
+        "id": "457",
+        "name": "Vocal cord paralysis",
+        "treatment": "The treatment of a vocal cord paralysis will depend on the severity. Usually, the treatment includes voice therapy. Voice therapy can help to strengthen the vocal cords and accelerate the regain of vocal functions. In severe cases, surgery will be necessary to fixate one vocal cord and thereby enable a better voice generation."
+    },
+    {
+        "id": "466",
+        "name": "Whiplash",
+        "treatment": "Whiplash can have devastating results, especially for social matters. Certain studies have shown that 7% of all people with whiplash were incapable of attending work long-term. Current therapy no longer recommends a neck brace but participation in an active physical therapy. Additionally, adequate  pain therapy and -if needed - muscle relaxant therapy should be considered, since an increased risk of lasting damage is possible without these treatments."
+    },
+    {
+        "id": "48",
+        "name": "Anorexia",
+        "treatment": "The insufficient supply with calories, but more importantly with vitamins and other essential nutrition can cause serious or even life-threatening physical symptoms. A low body weight can lead to hormonal disorders, such as irregularity or absence of menstruation. Men with anorexia may experience loss of potency and sexual drive. When the body fails to receive sufficient nutrition, bones can no longer rebuild themselves, which can lead to the early development of chronic osteoporosis. In rare cases it can lead to a reduced heart rate and body temperature, which requires an urgent trip to the hospital. Treatment of anorexia requires a specialist and is extremely important, as undernourishment can be fatal under certain circumstances. Treatment often occurs over a long period of time and relapse is common. In the event of acute life-threatening weight loss, induced nutrition, e.g. via a gastric tube or high-calorie drinks will be the initial treatment, followed by intensive psychotherapy and nutritional counselling."
+    },
+    {
+        "id": "483",
+        "name": "Brain damage caused by metabolic disorders",
+        "treatment": "The treatment of a metabolic encephalopathy will depend on the underlying problems. For example, if it is caused by an end stage of kidney failure, then the acute and long term treatment will be a regular hemodialysis. Medications are often used to control related symptoms, such as restlessness, sleeping disorder and somnolence caused by a metabolic encephalopathy. However, only when the underlying metabolic problem or disease is cured, the brain function can be totally improved. As long as there is any suspicious symptom happening, an immediate medical treatment is necessary to find out its cause and to prevent permanent damage."
+    },
+    {
+        "id": "495",
+        "name": "Bloated belly",
+        "treatment": "To relieve the symptom of the feeling of distention in the abdomen, there are multiple over-the-counter drugs. One can avoid meteorism by following some advice: 1) avoid carbonated drinks and food with high levels of fructose or sorbitol, 2) avoid food that can produce gas such as beans, cabbages and the like, 3) do not eat too quickly, 4) stop smoking and 5) work out. If meteorism is caused by an underlying disease, then one should visit a specialist to treat the disease first."
+    },
+    {
+        "id": "509",
+        "name": "Accumulation of fluid in the scrotum",
+        "treatment": "The treatments of hydrocele depend on the causes. For example, for a newborn there is no treatment required as it will improve over some period of time. If the hydrocele is caused by inguinal hernia or infections, then a surgery or anti-inflammatory medications and antibiotics may be necessary. However, a painless swollen scrotum should always be checked by a doctor to exclude more severe causes."
+    },
+    {
+        "id": "519",
+        "name": "Anal abscess",
+        "treatment": "The treatment of an anal abscess is mainly to remove the pus out of the infected area. A surgical drainage is often performed to drain the pus out from the affected anal gland. Also the whole cavity should be removed, because otherwise the recurrence of an abscess is very likely. Meanwhile, medications such as antibiotics may be used to prevent further infections. Hospitalization is often recommended for a detailed examination."
+    },
+    {
+        "id": "523",
+        "name": "Bone pain",
+        "treatment": "Beside pain relievers to reduce the symptoms, the treatment may include a therapy of the cause of the bone pain, which may be: 1) antibiotics: when the source of bone pain is an infection, 2) surgery: when certain parts of bone tissue died, surgery is needed to remove the damaged parts in order to allow proper regeneration, 3) nutritional supplements: when the source of pain is a deficiency of minerals, especially in patients with osteoporosis, 4) cancer treatment: common cancer treatments include surgery, radiation therapy and chemotherapy."
+    },
+    {
+        "id": "524",
+        "name": "Benign muscle twitching",
+        "treatment": "Normally benign muscle twitching only temporarily causes mild symptoms and does not require treatment. However, there are still some ways to prevent or reduce muscle twitching. These methods include: 1) anti-anxiety medications, 2) decreasing the intake of caffeine and nicotine, 3) good management of stress, 4) balanced nutrition, 5) muscles relaxing skills, and 6) avoidance of overuse of muscles."
+    },
+    {
+        "id": "541",
+        "name": "Benign muscle cramps",
+        "treatment": "Muscle cramps normally do not need treatment. If a person has a cramp, stretching and massaging the affected area usually relieves the pain. Using a warm towel or heating pad on tense or tight muscles may also help. In order to avoid muscle cramps dehydration should be avoided. Drinking enough liquids every day and stretching the muscles before and after using any muscle for an extended period can prevent benign muscle cramps."
+    },
+    {
+        "id": "542",
+        "name": "Blistering disease",
+        "treatment": "The treatment of pemphigus vulgaris will depend on the cause and severity. If it is triggered by a specific medication, then its intake should be stopped. Pemphigus vulgaris can be treated by medication that inhibits the autoimmune system. For example, medication such as immunosuppressive drugs and corticosteroids are often used. These medications often need to be taken over a long period of time."
+    },
+    {
+        "id": "548",
+        "name": "Yellow skin bumps",
+        "treatment": "The treatments of xanthoma will depend on the specific cause. After the underlying problem is diagnosed, the treatment will focus on this disease. The xanthoma itself does not need any treatment. Once the level of lipid in the blood decreases, they may automatically improve. Some people will accept a surgery to remove the xanthoma due to a cosmetic issue. However, it may return if the underlying problem is not solved."
+    },
+    {
+        "id": "553",
+        "name": "Benign skin tag",
+        "treatment": "Normally fibroma is not serious or life threating. Somehow benign fibroma can be removed if it is requested by patients due to cosmetic reasons, usually it can be just left alone. It is important to consult a dermatologist if it is difficult to tell whether the fibroma is benign or not. If it is cancer-related, a surgical removal can be considered."
+    },
+    {
+        "id": "562",
+        "name": "Broken rib",
+        "treatment": "The treatment of a rib fracture includes mainly medications such as non-steroidal anti-inflammatory drugs, painkillers, and narcotics to relieve the symptoms. Meanwhile, the doctor may also fixate the affected area to prevent dislocation of the ribs. An uncomplicated rib fracture takes 2-3 weeks to heal. If the rib fracture is severe or brings complications, then surgery will become necessary."
+    },
+    {
+        "id": "577",
+        "name": "Absence seizure",
+        "treatment": "The diagnosis of an absence seizure can be made by seeing the typical changes in EEG and the observation of the seizure. There are medicines that can help to prevent absence seizures. However it can be possible that multiple medication needs to be combined to have a freedom from seizures. And it\u2019s also possible that absence seizures will go away on their own. In children, 7 out of 10 kids with absence seizures will stop having them by age of 18. Possible treatment of patients with absence seizures only are sodium valproate or ethosuximide."
+    },
+    {
+        "id": "580",
+        "name": "Alcohol consumption",
+        "treatment": "An acute intoxication with alcohol may be life threatening and, in case of complete loss of consciousness, needs immediate intensive care in order to maintain vital functions such as breathing and circulation. Intoxicated persons should be put in a recovery position to protect them from aspiration of vomit. One of the most well-known treatments for alcohol use disorder is to join the mutual support group Alcoholics Anonymous. Besides, there are plenty of other possibilities like support with medication and behavioral therapies, as well as combinations of treatments."
+    },
+    {
+        "id": "582",
+        "name": "Age-related issues",
+        "treatment": "A healthy aging process is important for everyone. Though the process seems daunting, we can still do something to maintain healthy body function, for example: 1) eat a balanced diet, 2) keep your mind and body active, 3) don\u2019t smoke and drink alcohol, 4) get regular checkups and 5) practice safety habits to avoid accidents and prevent falls. With proper care, it is possible to age healthily."
+    },
+    {
+        "id": "584",
+        "name": "Accident injury",
+        "treatment": "Consequences and treatment depend on the type of injury. Talk therapy or short- or long-term medication help in the event of mental traumas. Sometimes an in-patient therapy in a specialized clinic might be necessary. A complication of a mental trauma is the post-traumatic stress disorder. Treatment for physical traumas also depends on the injury. Simple fractures or wounds can be stitched or rested in a plaster cast, while complicated or shifted fractures as well as contaminated, large wounds may require surgery. The more severe the injury or the more injuries a patient has, the more comprehensive is the treatment. Polytraumatized patients often need intensive care with ventilation or multiple surgeries."
+    },
+    {
+        "id": "585",
+        "name": "Autoimmune disease",
+        "treatment": "All autoimmune diseases are chronic and require lifelong therapy, to slow down the destruction of attacked structures and to maintain quality of life. In most cases therapy includes different medication that tries to influence the immune system to produce fewer antibodies against body-structures. As this therapy is not targeting a specific antibody, the immune-system will generally produce fewer antibodies, resulting in the patient being more susceptible to infections. Regular check-ups and therapy adjustments by a specialist for the respective conditions are important."
+    },
+    {
+        "id": "586",
+        "name": "Blood poisoning",
+        "treatment": "Patients with a sepsis definitely need antibiotic therapy, usually intravenous in the hospital, often even initially in intensive care. If possible, the source of infection should be treated. All other measures depend on the patient\u2019s symptoms. Infusions or organ replacement therapies (e.g. dialysis in case of kidney failure) are possible and often necessary at short notice. Despite intensive therapy the mortality rate of sepsis is 55% and even 60% for those with septic shock."
+    },
+    {
+        "id": "587",
+        "name": "Yeast infection",
+        "treatment": "Candidiasis infection levels may be lowered by daily personal hygiene and careful intake of antibiotics. The body is naturally populated by Candida without having any symptoms. Once a Candida infection occurs treatment is normally external medication depending on the location of infected areas. A systemic infection only occurs in severely sick patients with a deficient immune system. Treatment should be carried out in hospital by a specialist."
+    },
+    {
+        "id": "601",
+        "name": "Bad sleeping habits",
+        "treatment": "In order to have good sleep hygiene, it is important to change certain behaviors and habits that can affect normal sleep. Here are some suggestions for having good sleep hygiene: 1) avoid daytime sleep and overlong sleep time, 2) arrange a regular sleep schedule, 3) avoid intake of alcohol, caffeine, nicotine and food before sleep, 4) exercise regularly during the daytime and not after 6pm, 5) have enough exposure to sunlight, and 6) ensure a good sleep environment (good temperature, no lights and no sounds)."
+    },
+    {
+        "id": "609",
+        "name": "Voice overuse",
+        "treatment": "Here are some tips for keeping a healthy voice: 1) drinking water regularly, 2) no smoking, 3) not abusing or overusing the voice in an inappropriate way, 4) minimizing throat clearing, 5) moderating voice use when sick. If the affected person already has the symptoms of voice overuse, which affects his daily life, then he should look for a general practitioner or an otolaryngologist for help."
+    },
+    {
+        "id": "66",
+        "name": "Alzheimer type dementia",
+        "treatment": "Unfortunately there is no treatment for Alzheimer\u2019s yet that can cure it completely. There are medications that can alleviate some of the symptoms and allow the Alzheimer\u2019s patient to remain independent and part of their surroundings for longer. It is beneficial for a person with Alzheimer\u2019s to keep up with activities that they enjoy such as reading or solving puzzles, attending sessions that stimulate their minds and help with wellbeing, mood and memory."
+    },
+    {
+        "id": "664",
+        "name": "Benign tumor of the adrenal medulla",
+        "treatment": "A doctor can receive a first evidence of pheochromocytoma with a 24h blood pressure measurement and various further blood or urine tests. An ultrasound, computer tomography or magnetic resonance tomography can confirm the diagnosis. Eventually, options for tumor removal should be considered. The definitive treatment is surgery and until the tumor is removed, a doctor should control the patient\u2019s blood pressure regularly. An endocrinologist should be consulted. He will design a treatment plan for the affected person in specific. For cases of malignant pheochromocytomas which cannot be cured by surgery or radiation therapy, a chemotherapy may be necessary."
+    },
+    {
+        "id": "674",
+        "name": "Breast cancer",
+        "treatment": "Appropriate therapy is dependent on the spread and type of tumor. In early stages, surgery followed by radiation can preserve the breast and chemotherapy before the operation can be used to reduce the size of the tumor. In the case of larger tumors, the entire breast together with the lymph nodes of the underarm need to be removed, after, could be followed by chemo, hormone, or radiation therapy. Removal of the lymph nodes under the arms can cause swelling in the relevant arm. Prognosis is very dependent on how far the tumor has spread."
+    },
+    {
+        "id": "675",
+        "name": "Accident-related bone fracture of arm",
+        "treatment": "Treatment of accident-related fractures often requires surgery as the injuries often include multiple fractures or crush injuries and a high blood loss. Due to this, reconstructive surgery may be required. Most important is reconstruction of length, axis and rotation of the bone. Depending on what bones were broken, recovery could take a substantial amount of time, and rehabilitation may also be needed. Besides surgery, medication such as antibiotics (in open fractures) and analgesics can be considered for relieving pain or prevent bacterial infections."
+    },
+    {
+        "id": "676",
+        "name": "Accident-related bone fracture of finger",
+        "treatment": "Treatment of accident-related fractures often requires surgery as the injuries often include multiple fractures or crush injuries and a high blood loss. Due to this, reconstructive surgery may be required. Most important is reconstruction of length, axis and rotation of the bone. Depending on what bones were broken, recovery could take a substantial amount of time, and rehabilitation may also be needed. Besides surgery, medication such as antibiotics (in open fractures) and analgesics can be considered for relieving pain or prevent bacterial infections."
+    },
+    {
+        "id": "677",
+        "name": "Accident-related bone fracture of hand",
+        "treatment": "Treatment of accident-related fractures often requires surgery as the injuries often include multiple fractures or crush injuries and a high blood loss. Due to this, reconstructive surgery may be required. Most important is reconstruction of length, axis and rotation of the bone. Depending on what bones were broken, recovery could take a substantial amount of time, and rehabilitation may also be needed. Besides surgery, medication such as antibiotics (in open fractures) and analgesics can be considered for relieving pain or prevent bacterial infections."
+    },
+    {
+        "id": "678",
+        "name": "Accident-related bone fracture of wrist",
+        "treatment": "Treatment of accident-related fractures often requires surgery as the injuries often include multiple fractures or crush injuries and a high blood loss. Due to this, reconstructive surgery may be required. Most important is reconstruction of length, axis and rotation of the bone. Depending on what bones were broken, recovery could take a substantial amount of time, and rehabilitation may also be needed. Besides surgery, medication such as antibiotics (in open fractures) and analgesics can be considered for relieving pain or prevent bacterial infections."
+    },
+    {
+        "id": "679",
+        "name": "Accident-related bone fracture of elbow",
+        "treatment": "Treatment of accident-related fractures often requires surgery as the injuries often include multiple fractures or crush injuries and a high blood loss. Due to this, reconstructive surgery may be required. Most important is reconstruction of length, axis and rotation of the bone. Depending on what bones were broken, recovery could take a substantial amount of time, and rehabilitation may also be needed. Besides surgery, medication such as antibiotics (in open fractures) and analgesics can be considered for relieving pain or prevent bacterial infections."
+    },
+    {
+        "id": "680",
+        "name": "Accident-related bone fracture of shoulder",
+        "treatment": "Treatment of accident-related fractures often requires surgery as the injuries often include multiple fractures or crush injuries and a high blood loss. Due to this, reconstructive surgery may be required. Most important is reconstruction of length, axis and rotation of the bone. Depending on what bones were broken, recovery could take a substantial amount of time, and rehabilitation may also be needed. Besides surgery, medication such as antibiotics (in open fractures) and analgesics can be considered for relieving pain or prevent bacterial infections."
+    },
+    {
+        "id": "681",
+        "name": "Accident-related bone fracture of leg",
+        "treatment": "Treatment of accident-related fractures often requires surgery as the injuries often include multiple fractures or crush injuries and a high blood loss. Due to this, reconstructive surgery may be required. Most important is reconstruction of length, axis and rotation of the bone. Depending on what bones were broken, recovery could take a substantial amount of time, and rehabilitation may also be needed. Besides surgery, medication such as antibiotics (in open fractures) and analgesics can be considered for relieving pain or prevent bacterial infections."
+    },
+    {
+        "id": "682",
+        "name": "Accident-related bone fracture of toe",
+        "treatment": "Treatment of accident-related fractures often requires surgery as the injuries often include multiple fractures or crush injuries and a high blood loss. Due to this, reconstructive surgery may be required. Most important is reconstruction of length, axis and rotation of the bone. Depending on what bones were broken, recovery could take a substantial amount of time, and rehabilitation may also be needed. Besides surgery, medication such as antibiotics (in open fractures) and analgesics can be considered for relieving pain or prevent bacterial infections."
+    },
+    {
+        "id": "683",
+        "name": "Accident-related bone fracture of foot",
+        "treatment": "Treatment of accident-related fractures often requires surgery as the injuries often include multiple fractures or crush injuries and a high blood loss. Due to this, reconstructive surgery may be required. Most important is reconstruction of length, axis and rotation of the bone. Depending on what bones were broken, recovery could take a substantial amount of time, and rehabilitation may also be needed. Besides surgery, medication such as antibiotics (in open fractures) and analgesics can be considered for relieving pain or prevent bacterial infections."
+    },
+    {
+        "id": "684",
+        "name": "Accident-related bone fracture of ankle",
+        "treatment": "Treatment of accident-related fractures often requires surgery as the injuries often include multiple fractures or crush injuries and a high blood loss. Due to this, reconstructive surgery may be required. Most important is reconstruction of length, axis and rotation of the bone. Depending on what bones were broken, recovery could take a substantial amount of time, and rehabilitation may also be needed. Besides surgery, medication such as antibiotics (in open fractures) and analgesics can be considered for relieving pain or prevent bacterial infections."
+    },
+    {
+        "id": "685",
+        "name": "Accident-related bone fracture of knee",
+        "treatment": "Treatment of accident-related fractures often requires surgery as the injuries often include multiple fractures or crush injuries and a high blood loss. Due to this, reconstructive surgery may be required. Most important is reconstruction of length, axis and rotation of the bone. Depending on what bones were broken, recovery could take a substantial amount of time, and rehabilitation may also be needed. Besides surgery, medication such as antibiotics (in open fractures) and analgesics can be considered for relieving pain or prevent bacterial infections."
+    },
+    {
+        "id": "686",
+        "name": "Accident-related bone fracture of hip",
+        "treatment": "Treatment of accident-related fractures often requires surgery as the injuries often include multiple fractures or crush injuries and a high blood loss. Due to this, reconstructive surgery may be required. Most important is reconstruction of length, axis and rotation of the bone. Depending on what bones were broken, recovery could take a substantial amount of time, and rehabilitation may also be needed. Besides surgery, medication such as antibiotics (in open fractures) and analgesics can be considered for relieving pain or prevent bacterial infections."
+    },
+    {
+        "id": "99",
+        "name": "Benign prostate enlargement",
+        "treatment": "Benign prostatic hyperplasia needs to be differentiated from malignant prostate cancer. Prostate cancer is the most common form of malignant cancer in men. It affects preferencially the dorsal prostate region and can be partly felt with the finger (digital-rectal examination) from the rectum. Despite the tumor growth, many patients experience no symptoms. To detect it early on and thus have a better chance of treating the tumor, it\u2019s recommended for men over 50 to get screened for prostate-specific antigen (PSA)."
+    }
+]
