@@ -18,7 +18,11 @@ public class Constants {
             "Seizure",
             "Heat Stroke",
             "Poisoning",
-            "Allergic Reaction"
+            "Allergic Reaction",
+            "You failed, I'm sorry",
+            "You really suck at this",
+            "Fuck you very much",
+            "I hope you die"
     };
 
     public final static HashMap<Integer, List<String>> PHONE_NUMBERS = new HashMap<Integer, List<String>>() {{
