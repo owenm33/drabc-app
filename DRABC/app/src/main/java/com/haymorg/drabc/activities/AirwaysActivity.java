@@ -106,4 +106,7 @@ public class AirwaysActivity extends AppCompatActivity {
     public void onClose(View v) {
         finish();
     }
+
+    public void onPlay(View view) {
+    }
 }

@@ -11,6 +11,7 @@
         android:orientation="vertical"
         tools:context=".activities.CompressionsActivity">
 
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -41,8 +42,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="8"
             android:layout_gravity="center|top"
+            android:layout_weight="8"
             android:orientation="vertical">
 
             <TextView
@@ -52,20 +53,26 @@
                 android:layout_gravity="center_horizontal|top"
                 android:text="@string/compressions_title"
                 android:textColor="#FFFFFF"
-                android:textSize="@dimen/_30ssp"/>
+                android:textSize="@dimen/_30ssp" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:src="@drawable/cprgif"
+                android:background="@drawable/cprgif"
+                />
 
             <TextView
                 android:id="@+id/compressions_body"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:gravity="center_horizontal"
                 android:paddingTop="20dp"
-                android:text="@string/compressions_body"
                 android:textColor="#FFFFFF"
-                android:textSize="@dimen/_18ssp"/>
+                android:textSize="@dimen/_18ssp" />
 
         </LinearLayout>
 
@@ -79,13 +86,13 @@
             android:paddingTop="10dp">
 
             <Button
-                android:id="@+id/button_metronome"
-                android:layout_width="wrap_content"
+                android:id="@+id/play_cpr"
+                android:layout_width="239dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:onClick="onClose"
-                android:text="Close" />
-
+                android:layout_weight="1"
+                android:onClick="onPlay"
+                android:text="@string/DEMO_button" />
+a
             <Button
                 android:id="@+id/play_cpr"
                 android:layout_width="239dp"
