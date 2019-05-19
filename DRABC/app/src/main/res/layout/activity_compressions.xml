@@ -55,24 +55,26 @@
                 android:textColor="#FFFFFF"
                 android:textSize="@dimen/_30ssp" />
 
-            <pl.droidsonroids.gif.GifImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="8"
-                android:src="@drawable/cprgif"
-                android:background="@drawable/cprgif"
-                />
-
             <TextView
                 android:id="@+id/compressions_body"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:gravity="center_horizontal"
                 android:paddingTop="20dp"
+                android:text="@string/compressions_body"
                 android:textColor="#FFFFFF"
-                android:textSize="@dimen/_18ssp" />
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/cpr_gif"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/cprgif"
+                />
 
         </LinearLayout>
 
@@ -86,20 +88,20 @@
             android:paddingTop="10dp">
 
             <Button
-                android:id="@+id/play_cpr"
+                android:id="@+id/steps_cpr"
                 android:layout_width="239dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="onPlay"
-                android:text="@string/DEMO_button" />
+                android:onClick="onSteps"
+                android:text="Steps" />
 a
             <Button
                 android:id="@+id/play_cpr"
                 android:layout_width="239dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="onPlay"
-                android:text="@string/cpr_audio" />
+                android:onClick="onTempo"
+                android:text="Tempo" />
 
             <Button
                 android:id="@+id/stop_cpr"
@@ -108,6 +110,14 @@ a
                 android:layout_weight="1"
                 android:onClick="onStop"
                 android:text="Stop" />
+
+            <Button
+                android:id="@+id/stop_demo"
+                android:layout_width="239dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onDemo"
+                android:text="Demo" />
 
 
         </LinearLayout>

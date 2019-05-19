@@ -44,7 +44,7 @@ public class DangerActivity extends AppCompatActivity implements CustomDialogFra
         editor.putBoolean("D", answer);
         editor.apply();
         if (answer) {
-            showCustomDialog();
+                showCustomDialog();
         } else {
             startActivity(new Intent(DangerActivity.this, ResponseActivity.class));
             finish();
