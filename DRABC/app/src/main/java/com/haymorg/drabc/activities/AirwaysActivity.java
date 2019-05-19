@@ -2,6 +2,7 @@ package com.haymorg.drabc.activities;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -28,6 +29,7 @@ public class AirwaysActivity extends AppCompatActivity {
 
     private SharedPreferences userDetails;
     private boolean flashLightStatus = true;
+    CustomDialogFragment customDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,7 +89,7 @@ public class AirwaysActivity extends AppCompatActivity {
     private void showCustomDialog() {
         FragmentManager fm = getSupportFragmentManager();
         View dView = this.getWindow().getDecorView();
-        CustomDialogFragment customDialog =
+        customDialog =
                 CustomDialogFragment.newInstance(dView.getWidth(), dView.getHeight(), "Clear airways",
                         getResources().getString(R.string.airways_fragment_body), false);
         customDialog.show(fm, "fragment_custom_dialog");
@@ -107,6 +109,4 @@ public class AirwaysActivity extends AppCompatActivity {
         finish();
     }
 
-    public void onPlay(View view) {
-    }
 }

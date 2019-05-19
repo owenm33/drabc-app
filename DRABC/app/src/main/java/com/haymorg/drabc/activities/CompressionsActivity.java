@@ -42,8 +42,9 @@ public class CompressionsActivity extends AppCompatActivity {
     }
 
     public void onSteps(View v) {
-        binding.compressionsBody.setVisibility(View.VISIBLE);
+        cprGif.stop();
         cprGif.setVisible(false, true);
+        cprText.setVisibility(View.VISIBLE);
     }
 
     public void onTempo(View v) {
@@ -60,7 +61,7 @@ public class CompressionsActivity extends AppCompatActivity {
             cprSoundMediaPlayer.pause();
         }
 
-        if (cprGif.isPlaying()) {
+        if (cprGif.isRunning()) {
             cprGif.stop();
             cprGif.setVisible(false, true);
             cprText.setVisibility(View.VISIBLE);
@@ -68,11 +69,11 @@ public class CompressionsActivity extends AppCompatActivity {
     }
 
     public void onDemo(View v) {
-        if (cprGif.isPlaying()) {
+        if (cprGif.isRunning()) {
             cprGif.stop();
             cprGif.setVisible(false, true);
         } else {
-            cprGif.setVisible(true, false);
+            cprGif.setVisible(true, true);
             cprGif.start();
             cprText.setVisibility(View.GONE);
         }
