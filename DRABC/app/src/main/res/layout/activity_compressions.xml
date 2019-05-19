@@ -40,6 +40,7 @@
         </RelativeLayout>
 
         <LinearLayout
+            android:id="@+id/compressions_text_layout"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_gravity="center|top"
@@ -73,54 +74,84 @@
                 android:id="@+id/cpr_gif"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/cprgif"
+                android:src="@drawable/cpr_gif"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
                 />
 
         </LinearLayout>
 
-        <LinearLayout
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/compressions_buttons_layout"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_gravity="center|top"
-            android:layout_weight="2"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:paddingTop="10dp">
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
 
             <Button
                 android:id="@+id/steps_cpr"
-                android:layout_width="239dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.5"
+                app:layout_constraintRight_toLeftOf="@id/play_cpr"
+                app:layout_constraintTop_toBottomOf="@id/compressions_buttons_layout"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.5"
                 android:onClick="onSteps"
                 android:text="Steps" />
-a
+
             <Button
                 android:id="@+id/play_cpr"
-                android:layout_width="239dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.5"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintLeft_toRightOf="@id/steps_cpr"
+                app:layout_constraintTop_toBottomOf="@id/compressions_buttons_layout"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.5"
                 android:onClick="onTempo"
                 android:text="Tempo" />
 
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/compressions_buttons_layout_2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center|top"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
             <Button
                 android:id="@+id/stop_cpr"
-                android:layout_width="239dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.5"
+                app:layout_constraintLeft_toRightOf="@id/stop_demo"
+                app:layout_constraintTop_toBottomOf="@id/compressions_buttons_layout_2"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.5"
                 android:onClick="onStop"
                 android:text="Stop" />
 
             <Button
                 android:id="@+id/stop_demo"
-                android:layout_width="239dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.5"
+                app:layout_constraintRight_toLeftOf="@id/stop_cpr"
+                app:layout_constraintTop_toBottomOf="@id/compressions_buttons_layout_2"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.5"
                 android:onClick="onDemo"
                 android:text="Demo" />
-
-
-        </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
 
         <LinearLayout
             android:id="@+id/compressions_navigation_view"

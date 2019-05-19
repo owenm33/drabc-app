@@ -30,7 +30,7 @@ public class CompressionsActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_compressions);
         getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         try {
-            cprGif = new GifDrawable(getResources(), R.drawable.cprgif);
+            cprGif = new GifDrawable(getResources(), R.drawable.cpr_gif);
         } catch (IOException e) {
             e.printStackTrace();
         }
