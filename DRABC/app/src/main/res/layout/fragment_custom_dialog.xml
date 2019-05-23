@@ -26,6 +26,17 @@
                 android:backgroundTint="#00FFFFFF"
                 android:onClick="onClose"
                 app:srcCompat="@android:drawable/btn_dialog" />
+
+
+            <ImageView
+                android:id="@+id/dialog_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/ic_local_phone_black_36dp" />
+
         </RelativeLayout>
 
         <LinearLayout

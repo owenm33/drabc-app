@@ -3,6 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+        <variable
+            name="activity"
+            type="com.haymorg.drabc.activities.CompressionsActivity"/>
+    </data>
+
     <LinearLayout
         android:id="@+id/compressions_step_view"
         android:layout_width="match_parent"
@@ -99,6 +105,7 @@
                 app:layout_constraintTop_toBottomOf="@id/compressions_buttons_layout"
                 app:layout_constraintWidth_default="percent"
                 app:layout_constraintWidth_percent="0.5"
+                android:textSize="@dimen/_14ssp"
                 android:onClick="onSteps"
                 android:text="Steps" />
 
@@ -113,8 +120,9 @@
                 app:layout_constraintTop_toBottomOf="@id/compressions_buttons_layout"
                 app:layout_constraintWidth_default="percent"
                 app:layout_constraintWidth_percent="0.5"
+                android:textSize="@dimen/_14ssp"
                 android:onClick="onTempo"
-                android:text="Tempo" />
+                android:text="Audio" />
 
         </android.support.constraint.ConstraintLayout>
 
@@ -136,6 +144,7 @@
                 app:layout_constraintTop_toBottomOf="@id/compressions_buttons_layout_2"
                 app:layout_constraintWidth_default="percent"
                 app:layout_constraintWidth_percent="0.5"
+                android:textSize="@dimen/_14ssp"
                 android:onClick="onStop"
                 android:text="Stop" />
 
@@ -149,6 +158,7 @@
                 app:layout_constraintTop_toBottomOf="@id/compressions_buttons_layout_2"
                 app:layout_constraintWidth_default="percent"
                 app:layout_constraintWidth_percent="0.5"
+                android:textSize="@dimen/_14ssp"
                 android:onClick="onDemo"
                 android:text="Demo" />
         </android.support.constraint.ConstraintLayout>

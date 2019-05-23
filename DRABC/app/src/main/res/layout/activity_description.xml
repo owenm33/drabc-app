@@ -58,6 +58,7 @@
             android:layout_gravity="center_horizontal"
             android:enabled="false"
             android:onClick="onHelp"
+            android:textSize="@dimen/_14ssp"
             android:text="Suggest Treatment" />
 
     </LinearLayout>

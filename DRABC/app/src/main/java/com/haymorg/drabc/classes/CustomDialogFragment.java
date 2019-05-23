@@ -3,17 +3,20 @@ package com.haymorg.drabc.classes;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.databinding.DataBindingUtil;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.widget.TextViewCompat;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -37,6 +40,7 @@ public class CustomDialogFragment extends DialogFragment {
 
     private static Window dWindow;
     private TextView mTitle, mBody;
+    private ImageView mIcon;
     public CustomDialogListener mListener;
 
     public CustomDialogFragment() {
@@ -78,6 +82,7 @@ public class CustomDialogFragment extends DialogFragment {
         dWindow = getDialog().getWindow();
         mTitle = (TextView) getView().findViewById(R.id.dialog_title);
         mBody = (TextView) getView().findViewById(R.id.dialog_body);
+        mIcon = (ImageView) getView().findViewById(R.id.dialog_icon);
         String title = getArguments().getString("title", "DialogFragment title");
         String body = getArguments().getString("body", "DialogFragment body");
         getDialog().setTitle(title);
@@ -86,6 +91,8 @@ public class CustomDialogFragment extends DialogFragment {
 //        dWindow.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
         if (getArguments().getBoolean("clickable")) {
             setClickableText(mBody);
+        } else {
+            mIcon.setImageDrawable(getResources().getDrawable(R.drawable.ic_flight_black_36dp, null));
         }
     }
 
@@ -100,6 +107,7 @@ public class CustomDialogFragment extends DialogFragment {
             cloned.setOnClickListener(callClickListener);
             cloned.setText(entry.getValue().get(0));
             cloned.setLayoutParams(body.getLayoutParams());
+            cloned.setPaintFlags(cloned.getPaintFlags()| Paint.UNDERLINE_TEXT_FLAG);
             TextViewCompat.setTextAppearance(cloned, R.style.CustomTextView);
             if (id != 0) {
                 linearLayout.addView(cloned);
@@ -107,6 +115,8 @@ public class CustomDialogFragment extends DialogFragment {
             cloned = new TextView(getActivity());
             id++;
         }
+
+//        linearLayout.setHorizontalGravity(Gravity.LEFT);
 
     }
 

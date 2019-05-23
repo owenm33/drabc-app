@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.haymorg.drabc.R;
 import com.haymorg.drabc.databinding.ActivityCompressionsBinding;
-
+import com.haymorg.drabc.classes.Constants.cprDemoState;
 import java.io.IOException;
 
 import pl.droidsonroids.gif.GifDrawable;
@@ -23,11 +23,13 @@ public class CompressionsActivity extends AppCompatActivity {
     private MediaPlayer cprSoundMediaPlayer;
     private GifDrawable cprGif;
     private TextView cprText;
+    private cprDemoState uiState;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_compressions);
+        uiState = cprDemoState.DEMO;
         getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         try {
             cprGif = new GifDrawable(getResources(), R.drawable.cpr_gif);
@@ -38,13 +40,14 @@ public class CompressionsActivity extends AppCompatActivity {
         cprSoundMediaPlayer = MediaPlayer.create(this, R.raw.play_cpr);
         cprSoundMediaPlayer.setLooping(true);
         cprGif.start();
-//        final Button playPlay_Cpr = (Button) this.findViewById(R.id.play_cpr);
     }
 
     public void onSteps(View v) {
-        cprGif.stop();
-        cprGif.setVisible(false, true);
-        cprText.setVisibility(View.VISIBLE);
+        if (cprGif.isRunning()) {
+            cprGif.stop();
+            cprGif.setVisible(false, true);
+            cprText.setVisibility(View.VISIBLE);
+        }
     }
 
     public void onTempo(View v) {
@@ -72,6 +75,7 @@ public class CompressionsActivity extends AppCompatActivity {
         if (cprGif.isRunning()) {
             cprGif.stop();
             cprGif.setVisible(false, true);
+            cprText.setVisibility(View.VISIBLE);
         } else {
             cprGif.setVisible(true, true);
             cprGif.start();
@@ -80,10 +84,16 @@ public class CompressionsActivity extends AppCompatActivity {
     }
 
     public void onClose(View v) {
+        if (cprSoundMediaPlayer.isPlaying()) {
+            cprSoundMediaPlayer.pause();
+        }
         finish();
     }
 
     public void onPrevious(View v) {
+        if (cprSoundMediaPlayer.isPlaying()) {
+            cprSoundMediaPlayer.pause();
+        }
         startActivity(new Intent(CompressionsActivity.this, BreathingActivity.class));
         finish();
     }

@@ -11,4 +11,6 @@
     <color name="colorKush">#FF669900</color>
     <color name="colorSky">#FF33B5E5</color>
     <color name="colorGrimace">#FFAA66CC</color>
+    <color name="colorLink">#0000EE</color>
+    <color name="colorLinkVisited">#551A8B</color>
 </resources>

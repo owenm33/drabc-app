@@ -88,7 +88,7 @@ public class DangerActivity extends AppCompatActivity implements CustomDialogFra
         FragmentManager fm = getSupportFragmentManager();
         View dView = this.getWindow().getDecorView();
         customDialog =
-                CustomDialogFragment.newInstance(dView.getWidth(), dView.getHeight(), "Useful numbers\n (click to call)",
+                CustomDialogFragment.newInstance(dView.getWidth(), dView.getHeight(), "Contact numbers",
                         getResources().getString(R.string.danger_fragment_body), true);
         customDialog.setNewCustomDialogListener(this);
         customDialog.show(fm, "fragment_custom_dialog");
