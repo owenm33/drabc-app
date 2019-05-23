@@ -13,15 +13,18 @@ import android.widget.TextView;
 import com.haymorg.drabc.R;
 import com.haymorg.drabc.databinding.ActivityCompressionsBinding;
 import com.haymorg.drabc.classes.Constants.cprDemoState;
+
 import java.io.IOException;
 
 import pl.droidsonroids.gif.GifDrawable;
+import pl.droidsonroids.gif.GifImageView;
 
 public class CompressionsActivity extends AppCompatActivity {
 
     private ActivityCompressionsBinding binding;
     private MediaPlayer cprSoundMediaPlayer;
     private GifDrawable cprGif;
+    private GifImageView cprImage;
     private TextView cprText;
     private cprDemoState uiState;
 
@@ -30,6 +33,7 @@ public class CompressionsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_compressions);
         uiState = cprDemoState.DEMO;
+        cprImage = binding.cprGif;
         getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         try {
             cprGif = new GifDrawable(getResources(), R.drawable.cpr_gif);
@@ -43,11 +47,10 @@ public class CompressionsActivity extends AppCompatActivity {
     }
 
     public void onSteps(View v) {
-        if (cprGif.isRunning()) {
-            cprGif.stop();
-            cprGif.setVisible(false, true);
-            cprText.setVisibility(View.VISIBLE);
-        }
+        cprGif.stop();
+        cprGif.setVisible(false, true);
+        cprImage.setVisibility(View.GONE);
+        cprText.setVisibility(View.VISIBLE);
     }
 
     public void onTempo(View v) {
@@ -67,20 +70,16 @@ public class CompressionsActivity extends AppCompatActivity {
         if (cprGif.isRunning()) {
             cprGif.stop();
             cprGif.setVisible(false, true);
+            cprImage.setVisibility(View.GONE);
             cprText.setVisibility(View.VISIBLE);
         }
     }
 
     public void onDemo(View v) {
-        if (cprGif.isRunning()) {
-            cprGif.stop();
-            cprGif.setVisible(false, true);
-            cprText.setVisibility(View.VISIBLE);
-        } else {
-            cprGif.setVisible(true, true);
-            cprGif.start();
-            cprText.setVisibility(View.GONE);
-        }
+        cprGif.setVisible(true, true);
+        cprGif.start();
+        cprImage.setVisibility(View.VISIBLE);
+        cprText.setVisibility(View.GONE);
     }
 
     public void onClose(View v) {

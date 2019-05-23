@@ -1,26 +1,30 @@
 package com.haymorg.drabc.classes;
 
 import android.app.Activity;
+import android.app.FragmentTransaction;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.TextViewCompat;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.haymorg.drabc.R;
+import com.haymorg.drabc.activities.DangerActivity;
 import com.haymorg.drabc.databinding.FragmentCustomDialogBinding;
 
 
@@ -34,14 +38,19 @@ public class CustomDialogFragment extends DialogFragment {
     FragmentCustomDialogBinding binding;
 
     public interface CustomDialogListener {
-//        public void handleDialogClose();
         public void onCall(String number);
+    }
+
+    public interface CustomDialogCloseListener {
+        public void onCloseDialog();
     }
 
     private static Window dWindow;
     private TextView mTitle, mBody;
     private ImageView mIcon;
+    private ImageButton mClose;
     public CustomDialogListener mListener;
+    public CustomDialogCloseListener mCloseListener;
 
     public CustomDialogFragment() {
 
@@ -60,6 +69,10 @@ public class CustomDialogFragment extends DialogFragment {
     }
     public void setNewCustomDialogListener(CustomDialogListener listener) {
         this.mListener = listener;
+    }
+
+    public void setNewCustomDialogCloseListener(CustomDialogCloseListener listener) {
+        this.mCloseListener = listener;
     }
 
 //    @Override
@@ -83,6 +96,8 @@ public class CustomDialogFragment extends DialogFragment {
         mTitle = (TextView) getView().findViewById(R.id.dialog_title);
         mBody = (TextView) getView().findViewById(R.id.dialog_body);
         mIcon = (ImageView) getView().findViewById(R.id.dialog_icon);
+        mClose = (ImageButton) getView().findViewById(R.id.close_dialog);
+        mClose.setOnClickListener(closeClickListener);
         String title = getArguments().getString("title", "DialogFragment title");
         String body = getArguments().getString("body", "DialogFragment body");
         getDialog().setTitle(title);
@@ -127,9 +142,19 @@ public class CustomDialogFragment extends DialogFragment {
         }
     };
 
-    public void onClose(View v) {
-        dismiss();
+    private View.OnClickListener closeClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            onCloseDialog();
+        }
+    };
+
+
+
+    public void onCloseDialog() {
+        this.mCloseListener.onCloseDialog();
     }
+
 
     public void onNumberSet(String phoneNumber) {
         this.mListener.onCall(phoneNumber);
