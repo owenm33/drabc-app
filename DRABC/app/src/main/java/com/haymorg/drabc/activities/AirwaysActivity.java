@@ -2,6 +2,7 @@ package com.haymorg.drabc.activities;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -24,10 +25,12 @@ import com.haymorg.drabc.databinding.ActivityAirwaysBinding;
 import static com.haymorg.drabc.classes.Constants.MY_PERMISSIONS_REQUEST_CALL_PHONE;
 import static com.haymorg.drabc.classes.Constants.MY_PERMISSIONS_REQUEST_CAMERA;
 
-public class AirwaysActivity extends AppCompatActivity {
+public class AirwaysActivity extends AppCompatActivity implements CustomDialogFragment.CustomDialogCloseListener {
 
     private SharedPreferences userDetails;
     private boolean flashLightStatus = true;
+    CustomDialogFragment customDialog;
+    Intent airwaysIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,17 @@ public class AirwaysActivity extends AppCompatActivity {
         binding.setActivity(this);
         userDetails = getSharedPreferences("USER", MODE_PRIVATE);
         getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        airwaysIntent = getIntent();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
     }
 
     public void onAnswer(boolean answer) {
@@ -87,7 +101,7 @@ public class AirwaysActivity extends AppCompatActivity {
     private void showCustomDialog() {
         FragmentManager fm = getSupportFragmentManager();
         View dView = this.getWindow().getDecorView();
-        CustomDialogFragment customDialog =
+        customDialog =
                 CustomDialogFragment.newInstance(dView.getWidth(), dView.getHeight(), "Clear airways",
                         getResources().getString(R.string.airways_fragment_body), false);
         customDialog.show(fm, "fragment_custom_dialog");
@@ -103,10 +117,14 @@ public class AirwaysActivity extends AppCompatActivity {
         finish();
     }
 
+    public void onCloseDialog() {
+        startActivity(airwaysIntent);
+        customDialog.dismiss();
+        finish();
+    }
+
     public void onClose(View v) {
         finish();
     }
 
-    public void onPlay(View view) {
-    }
 }

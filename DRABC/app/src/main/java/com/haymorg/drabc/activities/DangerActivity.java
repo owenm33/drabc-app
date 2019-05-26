@@ -1,6 +1,8 @@
 package com.haymorg.drabc.activities;
 
 import android.Manifest;
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -21,12 +23,12 @@ import com.haymorg.drabc.databinding.ActivityDangerBinding;
 
 import static com.haymorg.drabc.classes.Constants.MY_PERMISSIONS_REQUEST_CALL_PHONE;
 
-public class DangerActivity extends AppCompatActivity implements CustomDialogFragment.CustomDialogListener {
+public class DangerActivity extends AppCompatActivity implements CustomDialogFragment.CustomDialogListener, CustomDialogFragment.CustomDialogCloseListener {
 
     private SharedPreferences userDetails;
     String currentNumber;
     CustomDialogFragment customDialog;
-    Intent callIntent, responseIntent;
+    Intent callIntent, responseIntent, dangerIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,17 @@ public class DangerActivity extends AppCompatActivity implements CustomDialogFra
         binding.setActivity(this);
         userDetails = getSharedPreferences("USER", MODE_PRIVATE);
         getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        dangerIntent = getIntent();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
     }
 
     public void onAnswer(boolean answer) {
@@ -44,7 +57,7 @@ public class DangerActivity extends AppCompatActivity implements CustomDialogFra
         editor.putBoolean("D", answer);
         editor.apply();
         if (answer) {
-            showCustomDialog();
+                showCustomDialog();
         } else {
             startActivity(new Intent(DangerActivity.this, ResponseActivity.class));
             finish();
@@ -55,6 +68,12 @@ public class DangerActivity extends AppCompatActivity implements CustomDialogFra
         currentNumber = number;
         callEmergency();
         customDialog.dismiss();
+    }
+
+    public void onCloseDialog() {
+        startActivity(dangerIntent);
+        customDialog.dismiss();
+        finish();
     }
 
     public void callEmergency() {
@@ -86,17 +105,24 @@ public class DangerActivity extends AppCompatActivity implements CustomDialogFra
 
     private void showCustomDialog() {
         FragmentManager fm = getSupportFragmentManager();
+
         View dView = this.getWindow().getDecorView();
         customDialog =
-                CustomDialogFragment.newInstance(dView.getWidth(), dView.getHeight(), "Useful numbers\n (click to call)",
+                CustomDialogFragment.newInstance(dView.getWidth(), dView.getHeight(), "Contact numbers",
                         getResources().getString(R.string.danger_fragment_body), true);
         customDialog.setNewCustomDialogListener(this);
-        customDialog.show(fm, "fragment_custom_dialog");
+        customDialog.setNewCustomDialogCloseListener(this);
+        customDialog.show(fm, null);
     }
 
     public void onNext(View v) {
         startActivity(new Intent(DangerActivity.this, ResponseActivity.class));
         finish();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
     }
 
     public void onClose(View v) {

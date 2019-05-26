@@ -20,9 +20,6 @@
             android:name=".activities.DescriptionActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".activities.DangerNumbersActivity"
-            android:theme="@style/MyDialogActivityTheme" />
-        <activity
             android:name=".activities.DangerActivity"
             android:theme="@style/MyDialogActivityTheme" />
         <activity

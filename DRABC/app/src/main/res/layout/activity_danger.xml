@@ -90,6 +90,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:onClick="@{() -> activity.onAnswer(true)}"
+                android:textSize="@dimen/_14ssp"
                 android:text="Yes" />
 
             <Button
@@ -98,6 +99,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:onClick="@{() -> activity.onAnswer(false)}"
+                android:textSize="@dimen/_14ssp"
                 android:text="No" />
 
         </LinearLayout>

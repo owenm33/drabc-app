@@ -100,6 +100,7 @@
                 android:layout_alignBottom="@id/buttonTorch"
                 android:layout_toEndOf="@id/buttonTorch"
                 android:onClick="@{() -> activity.onAnswer(true)}"
+                android:textSize="@dimen/_14ssp"
                 android:text="Yes" />
 
             <Button
@@ -110,6 +111,7 @@
                 android:layout_alignBottom="@id/buttonTorch"
                 android:layout_toEndOf="@id/buttonYes"
                 android:onClick="@{() -> activity.onAnswer(false)}"
+                android:textSize="@dimen/_14ssp"
                 android:text="No" />
 
         </RelativeLayout>
