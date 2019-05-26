@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.haymorg.drabc.R;
+import com.haymorg.drabc.classes.CustomDialogFragment;
 import com.haymorg.drabc.databinding.ActivityBreathingBinding;
 
 public class BreathingActivity extends AppCompatActivity {

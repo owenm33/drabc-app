@@ -42,7 +42,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:gravity="center_vertical"
             android:orientation="vertical">
 
@@ -50,25 +50,33 @@
                 android:id="@+id/dialog_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
                 android:text="DialogFragment title"
                 android:textColor="#070000"
                 android:textSize="@dimen/_20ssp"
                 android:textStyle="bold" />
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/dialog_body_view"
-            android:layout_width="match_parent"
+        <ScrollView
             android:layout_height="0dp"
-            android:layout_gravity="center|bottom"
+            android:layout_width="match_parent"
             android:layout_weight="7"
-            android:orientation="vertical">
+            android:fillViewport="true">
 
-            <TextView
-                android:id="@+id/dialog_body"
-                style="@style/CustomTextView" />
-        </LinearLayout>
+            <LinearLayout
+                android:id="@+id/dialog_body_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scrollbars="vertical"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dialog_body"
+                    style="@style/CustomTextView" />
+            </LinearLayout>
+        </ScrollView>
 
     </LinearLayout>
 </layout>

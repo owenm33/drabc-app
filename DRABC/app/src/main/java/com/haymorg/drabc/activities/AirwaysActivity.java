@@ -103,7 +103,7 @@ public class AirwaysActivity extends AppCompatActivity implements CustomDialogFr
         View dView = this.getWindow().getDecorView();
         customDialog =
                 CustomDialogFragment.newInstance(dView.getWidth(), dView.getHeight(), "Clear airways",
-                        getResources().getString(R.string.airways_fragment_body), false);
+                        getResources().getString(R.string.airways_fragment_body), "airways");
         customDialog.show(fm, "fragment_custom_dialog");
     }
 
