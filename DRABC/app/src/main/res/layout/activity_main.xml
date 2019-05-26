@@ -17,10 +17,10 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@color/colorAccent"
+            android:background="#0A090A"
             android:onClick="onDanger"
             android:text="D"
-            android:textColor="@android:color/background_light"
+            android:textColor="#CDDC39"
             android:textSize="@dimen/_30ssp" />
 
         <Button
@@ -28,10 +28,10 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@android:color/holo_orange_light"
+            android:background="#0D0C0F"
             android:onClick="onResponse"
             android:text="R"
-            android:textColor="@android:color/background_light"
+            android:textColor="#E91E63"
             android:textSize="@dimen/_30ssp" />
 
         <Button
@@ -39,10 +39,10 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@android:color/holo_green_dark"
+            android:background="#0C0C0C"
             android:onClick="onAirways"
             android:text="A"
-            android:textColor="@android:color/background_light"
+            android:textColor="#2196F3"
             android:textSize="@dimen/_30ssp" />
 
         <Button
@@ -50,10 +50,10 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@android:color/holo_blue_light"
+            android:background="#0D0F0F"
             android:onClick="onBreathing"
             android:text="B"
-            android:textColor="@android:color/background_light"
+            android:textColor="#4CAF50"
             android:textSize="@dimen/_30ssp" />
 
         <Button
@@ -61,10 +61,10 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@android:color/holo_purple"
+            android:background="#0F0B11"
             android:onClick="onCompressions"
             android:text="C"
-            android:textColor="@android:color/background_light"
+            android:textColor="#9C27B0"
             android:textSize="@dimen/_30ssp" />
 
     </LinearLayout>

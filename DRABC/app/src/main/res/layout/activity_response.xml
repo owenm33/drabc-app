@@ -13,7 +13,7 @@
         android:id="@+id/response_step_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#2C177E"
+        android:background="@color/colorGrimace"
         android:orientation="vertical"
         tools:context=".activities.ResponseActivity">
 
