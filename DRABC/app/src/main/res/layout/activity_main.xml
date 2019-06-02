@@ -23,3 +23,80 @@
         app:menu="@menu/activity_main_drawer" />
 
 </android.support.v4.widget.DrawerLayout>
+        <Button
+            android:id="@+id/danger_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#000000"
+            android:onClick="onDanger"
+            android:text="D"
+            android:textColor="@color/colorRonald"
+            android:textSize="@dimen/_30ssp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorWhite"/>
+
+        <Button
+            android:id="@+id/response_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#000000"
+            android:onClick="onResponse"
+            android:text="R"
+            android:textColor="@color/colorOcean"
+            android:textSize="@dimen/_30ssp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorWhite"/>
+
+        <Button
+            android:id="@+id/airways_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#000000"
+            android:onClick="onAirways"
+            android:text="A"
+            android:textColor="@color/colorKush"
+            android:textSize="@dimen/_30ssp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorWhite"/>
+
+        <Button
+            android:id="@+id/breathing_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#000000"
+            android:onClick="onBreathing"
+            android:text="B"
+            android:textColor="@color/colorSky"
+            android:textSize="@dimen/_30ssp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorWhite"/>
+
+        <Button
+            android:id="@+id/compressions_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#000000"
+            android:onClick="onCompressions"
+            android:text="C"
+            android:textColor="@color/colorGrimace"
+            android:textSize="@dimen/_30ssp" />
+
+    </LinearLayout>
+</layout>

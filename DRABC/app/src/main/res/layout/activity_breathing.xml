@@ -58,7 +58,7 @@
                 android:layout_gravity="center_horizontal|top"
                 android:text="@string/breathing_title"
                 android:textColor="#FFFFFF"
-                android:textSize="30sp"/>
+                android:textSize="@dimen/_30ssp"/>
 
             <TextView
                 android:id="@+id/breathing_body"
@@ -71,7 +71,7 @@
                 android:paddingTop="20dp"
                 android:text="@string/breathing_body"
                 android:textColor="#FFFFFF"
-                android:textSize="18sp"/>
+                android:textSize="@dimen/_18ssp"/>
 
         </LinearLayout>
 
@@ -90,6 +90,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:onClick="@{() -> activity.onAnswer(true)}"
+                android:textSize="@dimen/_14ssp"
                 android:text="Yes" />
 
             <Button
@@ -98,6 +99,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:onClick="@{() -> activity.onAnswer(false)}"
+                android:textSize="@dimen/_14ssp"
                 android:text="No" />
 
         </LinearLayout>

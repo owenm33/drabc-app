@@ -13,7 +13,7 @@
         android:id="@+id/response_step_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/holo_orange_light"
+        android:background="@color/colorOcean"
         android:orientation="vertical"
         tools:context=".activities.ResponseActivity">
 
@@ -58,7 +58,7 @@
                 android:layout_gravity="center_horizontal|top"
                 android:text="@string/response_title"
                 android:textColor="#FFFFFF"
-                android:textSize="30sp" />
+                android:textSize="@dimen/_30ssp" />
 
             <TextView
                 android:id="@+id/response_body"
@@ -71,7 +71,7 @@
                 android:paddingTop="20dp"
                 android:text="@string/response_body"
                 android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:textSize="@dimen/_18ssp" />
 
         </LinearLayout>
 
@@ -90,6 +90,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:onClick="@{() -> activity.onAnswer(true)}"
+                android:textSize="@dimen/_14ssp"
                 android:text="Yes" />
 
             <Button
@@ -98,6 +99,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:onClick="@{() -> activity.onAnswer(false)}"
+                android:textSize="@dimen/_14ssp"
                 android:text="No" />
 
         </LinearLayout>

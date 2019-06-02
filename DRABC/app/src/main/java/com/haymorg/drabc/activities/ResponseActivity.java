@@ -8,6 +8,9 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.databinding.DataBindingUtil;
 import android.net.Uri;
+import android.os.Build;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -24,6 +27,7 @@ public class ResponseActivity extends AppCompatActivity {
 
     private SharedPreferences userDetails;
     Intent callIntent, airwaysIntent;
+    Vibrator vibrator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +37,7 @@ public class ResponseActivity extends AppCompatActivity {
         ActivityResponseBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_response);
         binding.setActivity(this);
         userDetails = getSharedPreferences("USER", MODE_PRIVATE);
+        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
         getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
     }
 
@@ -55,6 +60,12 @@ public class ResponseActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         if (!userDetails.getBoolean("R", false)) {
+                            if (Build.VERSION.SDK_INT >= 26) {
+                                vibrator.vibrate(VibrationEffect.createOneShot(200, VibrationEffect.DEFAULT_AMPLITUDE));
+                            } else {
+                                vibrator.vibrate(200);
+                            }
+                            
                             Toast.makeText(getApplicationContext(), getResources().getString(R.string.call_emergency_warning), Toast.LENGTH_LONG).show();
                         } else {
                             startActivity(airwaysIntent);
