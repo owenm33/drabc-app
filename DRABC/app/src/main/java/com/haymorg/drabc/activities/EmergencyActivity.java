@@ -9,11 +9,11 @@ import android.view.View;
 import android.widget.Button;
 
 import com.haymorg.drabc.R;
-import com.haymorg.drabc.databinding.ActivityMainBinding;
+import com.haymorg.drabc.databinding.ActivityEmergencyBinding;
 
 public class EmergencyActivity extends AppCompatActivity {
 
-    private ActivityMainBinding binding;
+    private ActivityEmergencyBinding binding;
     private SharedPreferences userDetails;
 
     @Override

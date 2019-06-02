@@ -86,6 +86,7 @@ public class MainActivity extends AppCompatActivity
             startActivity(new Intent(MainActivity.this, EmergencyActivity.class));
 
         } else if (id == R.id.nav_diagnosis) {
+            startActivity(new Intent(MainActivity.this, DescriptionActivity.class));
 
         } else if (id == R.id.nav_symptom) {
 
