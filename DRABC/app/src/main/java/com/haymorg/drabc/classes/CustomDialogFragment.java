@@ -51,19 +51,24 @@ public class CustomDialogFragment extends DialogFragment {
     private ImageButton mClose;
     public CustomDialogListener mListener;
     public CustomDialogCloseListener mCloseListener;
+    private static String dialogType;
 
     public CustomDialogFragment() {
 
     }
 
-    public static CustomDialogFragment newInstance(int width, int height, String title, String body, boolean clickableText) {
+    public static CustomDialogFragment newInstance(int width, int height, String title, String body, String type) {
         CustomDialogFragment frag = new CustomDialogFragment();
         Bundle args = new Bundle();
         args.putString("title", title);
         args.putString("body", body);
         args.putInt("width", 7*width/8);
         args.putInt("height", 7*height/8);
-        args.putBoolean("clickable", clickableText);
+        dialogType = type;
+        if (dialogType.equals("helpfulNumbers")) {
+            args.putBoolean("clickable", true);
+        }
+//        args.putBoolean("clickable", clickableText);
         frag.setArguments(args);
         return frag;
     }
@@ -106,8 +111,10 @@ public class CustomDialogFragment extends DialogFragment {
 //        dWindow.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
         if (getArguments().getBoolean("clickable")) {
             setClickableText(mBody);
-        } else {
+        } else if (dialogType.equals("airways")) {
             mIcon.setImageDrawable(getResources().getDrawable(R.drawable.ic_flight_black_36dp, null));
+        } else if (dialogType.equals("description")) {
+            mIcon.setImageDrawable(getResources().getDrawable(R.drawable.ic_treatment_black_36dp, null));
         }
     }
 

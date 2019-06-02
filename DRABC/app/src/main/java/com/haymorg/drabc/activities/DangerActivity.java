@@ -57,7 +57,7 @@ public class DangerActivity extends AppCompatActivity implements CustomDialogFra
         editor.putBoolean("D", answer);
         editor.apply();
         if (answer) {
-                showCustomDialog();
+            showCustomDialog();
         } else {
             startActivity(new Intent(DangerActivity.this, ResponseActivity.class));
             finish();
@@ -72,8 +72,8 @@ public class DangerActivity extends AppCompatActivity implements CustomDialogFra
 
     public void onCloseDialog() {
         startActivity(dangerIntent);
-        customDialog.dismiss();
         finish();
+        customDialog.dismiss();
     }
 
     public void callEmergency() {
@@ -109,7 +109,7 @@ public class DangerActivity extends AppCompatActivity implements CustomDialogFra
         View dView = this.getWindow().getDecorView();
         customDialog =
                 CustomDialogFragment.newInstance(dView.getWidth(), dView.getHeight(), "Contact numbers",
-                        getResources().getString(R.string.danger_fragment_body), true);
+                        getResources().getString(R.string.danger_fragment_body), "usefulNumbers");
         customDialog.setNewCustomDialogListener(this);
         customDialog.setNewCustomDialogCloseListener(this);
         customDialog.show(fm, null);

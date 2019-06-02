@@ -1,6 +1,7 @@
 package com.haymorg.drabc.activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
@@ -27,23 +28,24 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class DescriptionActivity extends AppCompatActivity {
+public class DescriptionActivity extends AppCompatActivity implements CustomDialogFragment.CustomDialogCloseListener {
 
     private ActivityDescriptionBinding binding;
     private String problemDescription;
     ArrayAdapter<String> description_adapter;
     AutoCompleteTextView descriptionAutoText;
-    private boolean got_locations = false;
     ArrayList<String> diagnoses = new ArrayList<>();
     ArrayList<String> diagnosis_id = new ArrayList<>();
     String condition, treatmentID, treatmentDescription;
+    CustomDialogFragment customDialog;
+    Intent descriptionIntent;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_description);
-
+        descriptionIntent = getIntent();
     }
 
     @Override
@@ -82,10 +84,11 @@ public class DescriptionActivity extends AppCompatActivity {
     private void showCustomDialog(String condition, String treatment) {
         FragmentManager fm = getSupportFragmentManager();
         View dView = this.getWindow().getDecorView();
-        CustomDialogFragment customDialog =
+        customDialog =
                 CustomDialogFragment.newInstance(dView.getWidth(), dView.getHeight(), condition,
-                        treatment, false);
-        customDialog.show(fm, "fragment_custom_dialog");
+                        treatment, "description");
+        customDialog.setNewCustomDialogCloseListener(this);
+        customDialog.show(fm, null);
     }
 
     private void getTreatment(String id) {
@@ -142,5 +145,9 @@ public class DescriptionActivity extends AppCompatActivity {
         });
     }
 
-
+    public void onCloseDialog() {
+        startActivity(descriptionIntent);
+        finish();
+        customDialog.dismiss();
+    }
 }
