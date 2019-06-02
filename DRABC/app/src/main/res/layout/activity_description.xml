@@ -32,7 +32,7 @@
             android:paddingTop="25dp"
             android:text="@string/description_body"
             android:textColor="#F7020000"
-            android:textSize="18sp" />
+            android:textSize="@dimen/_18ssp" />
 
         <AutoCompleteTextView
             android:id="@+id/descriptionAutoComplete"
@@ -56,8 +56,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:enabled="false"
             android:onClick="onHelp"
-            android:text="Help" />
+            android:textSize="@dimen/_14ssp"
+            android:text="Suggest Treatment" />
 
     </LinearLayout>
 </layout>

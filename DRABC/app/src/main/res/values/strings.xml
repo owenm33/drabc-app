@@ -10,12 +10,31 @@
     <string name="response_body">If the casualty appears unconscious, <b>do they respond</b> when you: \n\n 1. Loudly <b>say their name?</b>\n 2. <b>Shake them</b> firmly by their shoulders?\n 3. Roll your <b>knuckles on their sternum</b>?</string>
     <string name="airways_body">1. <b>Place one hand</b> on the casualty\'s forehead\n 2. Gently <b>tilt their head back</b>\n 3. Pull their chin down using two fingers and thoroughly <b>inspect their throat</b>\n <small>(use torch if needed)</small>\n\n <b>Are their airways clear?</b></string>
     <string name="breathing_body">1. <b><i>Observe</i> chest</b>\n Is it moving up and down?\n 2. <b><i>Feel</i> lower chest</b>\n Is it expanding?\n 3. <b><i>Listen</i>, by placing your ear near their mouth and nose</b>\n Can you hear anything?\n\n <b>Are they breathing regularly, or at all?</b></string>
-    <string name="compressions_body"><b>1. Lay them flat on their back\n 2. Place heel of one hand in the centre of their chest and your other hand on top\n 3. Push down firmly so chest depresses 1/3 in depth. Repeat 30 times. \n 4. Tilt their head back and pinch their nostrils closed\n 5. Place your open mouth firmly over theirs and blow twice\n 6. Repeat 1-5 until they respond or help arrives</b></string>
+    <string name="compressions_body"><b>1. Lay them flat on their back\n 2. Place heel of one hand in the centre of their chest and your other hand on top\n 3. Push down firmly so chest depresses 1/3 in depth. Repeat 30 times using Play button as guide. \n 4. Tilt their head back and pinch their nostrils closed\n 5. Place your open mouth firmly over theirs and blow twice\n 6. Repeat 1-5 until they respond or help arrives</b></string>
     <string name="description_body">Please enter a brief description of the problem (one or two words) to receive further instructions</string>
 
     <string name="call_emergency_warning">WARNING: by not calling emergency services immediately, you are endangering the life of the casualty and may be responsible for their death</string>
     <string name="airways_fragment_body">If foreign material present, place casualty in recovery position and clear airway with fingers</string>
     <string name="danger_fragment_body">Insert list of numbers here</string>
     <string name="cpr_audio">Play</string>
+    <string name="DEMO_button">DEMO</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="epa_name">1. <u>EPA</u> [for chemical spills]\n</string>
+
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Dr. ABC</string>
+    <string name="nav_header_subtitle">Medical assistant</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_emergency">Emergency response</string>
+    <string name="menu_symptoms">Symptom tracker</string>
+    <string name="menu_diagnosis">Diagnosis assistant</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_feedback">Feedback</string>
+    <string name="menu_help">Help</string>
+    <string name="title_activity_main">Dr. ABC</string>
 </resources>
